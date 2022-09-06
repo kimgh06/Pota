@@ -19,3 +19,33 @@
 body {
     background-color: beige;
 }
+
+#sideBar{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 20%;
+    height:100%;
+    background-color: rgb(105, 191, 225);
+    transition: all 0.5s ease;
+}
+
+#menu{
+    font-size: 20px;
+    color: white;
+}
+
+#menuButton{
+    margin-top: 20px; 
+    margin-left: 30px; 
+    font-size: 30px; 
+    width:45px; 
+    height: 45px; 
+    background-color: white; 
+    border:1px solid white;
+    transition: all 0.5s ease;
+}
+
+.hidden{
+    display: none;
+}
