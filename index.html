@@ -12,14 +12,26 @@
     <div id="searchHead">
         <form>
             <span id="logo">logo</span>
-            <input id="searchLine" placeholder="Search" type="text" autofocus>
+            <input id="searchLine" placeholder="Search" type="text" autofocus autocomplete='off' required>
             <button id="searchButton">Search</button>
         </form>
     </div>
-    <div>
-
-    </div>
+    <aside id = "sideBar">
+        <div>
+            <button id="menuButton" onclick="toggleMenu()">
+                三
+            </button>
+        </div>
+        <div id = "menu">
+            <ul>
+                <li>
+                    sidebar
+                </li>
+            </ul>
+        </div>
+    </aside>
     <link rel="stylesheet" href="포털보조.css">
+    <script src="포털보조.js"></script>
 </body>
 
 </html>
