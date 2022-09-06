@@ -49,3 +49,13 @@ body {
 .hidden{
     display: none;
 }
+
+.link{
+    color:white; 
+    text-decoration: none; 
+    text-decoration-line: none;
+}
+
+#menu li {
+    margin-top:10px;
+}
