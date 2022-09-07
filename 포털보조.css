@@ -79,3 +79,8 @@ body {
 ul hr{
     margin-right: 6%;
 }
+
+#end{
+    position: fixed;
+    bottom: 10px;
+}
