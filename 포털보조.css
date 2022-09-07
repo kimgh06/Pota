@@ -26,7 +26,7 @@ body {
     left: 0px;
     width: 20%;
     height:100%;
-    background-color: rgb(105, 191, 225);
+    background-color: rgba(255, 255, 255, 0);
     transition: all 0.5s ease;
 }
 
@@ -41,7 +41,8 @@ body {
     font-size: 30px; 
     width:45px; 
     height: 45px; 
-    background-color: white; 
+    color: white;
+    background-color: rgb(105, 191, 225); 
     border:1px solid white;
     transition: all 0.5s ease;
 }
