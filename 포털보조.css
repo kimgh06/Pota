@@ -53,6 +53,7 @@ body {
 
 .link{
     color:white; 
+    font-size:20px;
     text-decoration: none; 
     text-decoration-line: none;
 }
@@ -84,10 +85,17 @@ ul hr{
     position: fixed;
     bottom: 10px;
     width:25%;
+    color:white; 
+    font-size:20px;
 }
 
-#login{
-    margin-left:7%; 
-    margin-top:-2%; 
-    position: fixed;
+#loginDiv{
+    margin-top: -48px; 
+    margin-left: 80px;
+    display: flex;
+}
+
+#loginButton{
+    width:45px;
+    height:45px;
 }
