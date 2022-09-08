@@ -39,23 +39,31 @@
             <button id="menuButton" onclick="toggleMenu()">
                 三
             </button>
-            <div id="login" style="margin-left:7%; margin-top:-2%; position: fixed;">
-                <input type="text">
-                <button>
+        </div>
+        <div id="loginDiv" class="hidden">
+            <div>
+                <input type="text" id="loginId" placeholder="Id"><br>
+                <input type="text" id="loginPw" placeholder="Password">
+            </div>
+            <div>
+                <button id="loginButton">
                     login
                 </button>
             </div>
         </div>
-        <div id="menu" class="hidden">
-            <ul>
+        <div id="mainside" class="hidden">
+            <ul class="link">
                 <li>
-                    <a href="index.html" class="link" title = "click here">▶ Main Page ◀</a>
+                    <a href="index.html" class="link" title="click here">▶ Main Page ◀</a>
                 </li>
                 <li>
-                    <a href="https://www.google.com" target="_blank" class="link" title = "click here">▶ Go To Google ◀</a>
+                    <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To Google
+                        ◀</a>
                 </li>
                 <li>
-                    <a href="https://github.com/kimgh06/Portal" target="_blank" class="link" title = "click here">▶ View Source Code ◀</a>
+                    <a href="https://github.com/kimgh06/Portal" target="_blank" class="link" title="click here">▶
+                        View
+                        Source Code ◀</a>
                 </li>
             </ul>
             <div id="end">
