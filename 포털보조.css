@@ -8,9 +8,10 @@
     height:37px; 
     margin-left: -15px; 
     background-color: aquamarine; 
-    border:2px solid rgb(213, 213, 213);
+    border:2px solid rgb(213, 213, 213,0);
+    border-radius: 10px;
 }
-#searchHead{
+header{
     font-size: 50px; 
     text-align: center;
     margin-top:30px;
