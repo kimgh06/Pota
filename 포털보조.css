@@ -98,4 +98,6 @@ ul hr{
 #loginButton{
     width:45px;
     height:45px;
+    margin-left:3px;
+    margin-top: 4px;
 }
