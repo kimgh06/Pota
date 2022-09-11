@@ -101,4 +101,6 @@ ul hr{
     height:45px;
     margin-left:3px;
     margin-top: 4px;
+    background-color: aquamarine;
+    border: 1px solid white;
 }
