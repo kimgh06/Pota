@@ -11,7 +11,7 @@ function toggleMenu(){
         menuButton.style.color = "black";
         menuButton.style.transform = "rotate(-180deg)"
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
-        loginDiv.classList.remove("hidden");
+        loginDiv.style.display = 'flex';
     }
     else{
         mainside.classList.add("hidden");
@@ -19,7 +19,7 @@ function toggleMenu(){
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
         menuButton.style.transform = "rotate(0deg)"
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
-        loginDiv.classList.add("hidden");
+        loginDiv.style.display = 'none';
     }
 }
 
