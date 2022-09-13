@@ -114,9 +114,11 @@ ul hr{
 #postingCompleteButton{
     background-color: aquamarine;
     border: 1px solid aquamarine;
+    border-radius: 10px;
+    margin-left:5px;
 }
 
 #postingInput{
-    width:300px;
-    height:20px;
+    width:60%;
+    height:70px;
 }
