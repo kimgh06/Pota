@@ -102,5 +102,17 @@ ul hr{
     margin-left:3px;
     margin-top: 4px;
     background-color: aquamarine;
-    border: 1px solid white;
+    border: 1px solid aquamarine;
+}
+
+#postingBackground{
+    margin:3%;
+    justify-content: center;
+    display: flex;
+}
+
+#postingCompleteButton{
+    background-color: aquamarine;
+    border: 1px solid aquamarine;
+
 }
