@@ -46,5 +46,6 @@ function postingButtonToggle() {
 }
 
 function postingComplete(){
-    alert("뀨");
+    const finalClick =  confirm("제출하시겠습니까?");
+    console.log(finalClick);
 }
