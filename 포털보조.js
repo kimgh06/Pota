@@ -38,8 +38,13 @@ function postingButtonToggle() {
         const postingCompleteButton = document.createElement('button');
         postingCompleteButton.innerText = "완료";
         postingCompleteButton.id = "postingCompleteButton";
+        postingCompleteButton.onclick = postingComplete;
         postingBackground.appendChild(postingInput);
         postingBackground.appendChild(postingCompleteButton);
         document.body.appendChild(postingBackground);
     }
+}
+
+function postingComplete(){
+    alert("뀨");
 }
