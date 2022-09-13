@@ -1,11 +1,11 @@
 let searchLine = document.querySelector("#searchLine");
 const main = document.querySelector("#main");
-function toggleMenu(){
+function toggleMenu() {
     const mainside = document.querySelector("#mainside");
     const menuButton = document.querySelector("#menuButton");
     const sideBar = document.querySelector("#sideBar");
     const loginDiv = document.querySelector("#loginDiv");
-    if(mainside.classList.contains("hidden")){
+    if (mainside.classList.contains("hidden")) {
         mainside.classList.remove("hidden");
         menuButton.style.backgroundColor = "white";
         menuButton.style.color = "black";
@@ -13,7 +13,7 @@ function toggleMenu(){
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
         loginDiv.style.display = 'flex';
     }
-    else{
+    else {
         mainside.classList.add("hidden");
         menuButton.style.color = "white";
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
@@ -23,11 +23,22 @@ function toggleMenu(){
     }
 }
 
-function posting(){
-    const postingBackground = document.createElement('div');
-    postingBackground.class = "postingBackground";
-    const postingInput = document.createElement('input');
-    postingInput.type='text';
-    postingBackground.appendChild(postingInput);
-    document.body.appendChild(postingBackground);
+function postingButtonToggle() {
+    if (document.getElementById("postingBackground")) {
+        document.getElementById("postingBackground").remove();
+    }
+    else {
+        const postingBackground = document.createElement('div');
+        postingBackground.id = "postingBackground";
+        const postingInput = document.createElement('input');
+        postingInput.type = 'text';
+        postingInput.placeholder = "입력하기";
+        postingInput.id = "postingInput";
+        const postingCompleteButton = document.createElement('button');
+        postingCompleteButton.innerText = "완료";
+        postingCompleteButton.id = "postingCompleteButton";
+        postingBackground.appendChild(postingInput);
+        postingBackground.appendChild(postingCompleteButton);
+        document.body.appendChild(postingBackground);
+    }
 }
