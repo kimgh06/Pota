@@ -1,5 +1,5 @@
 let searchLine = document.querySelector("#searchLine");
-
+const main = document.querySelector("#main");
 function toggleMenu(){
     const mainside = document.querySelector("#mainside");
     const menuButton = document.querySelector("#menuButton");
@@ -23,3 +23,11 @@ function toggleMenu(){
     }
 }
 
+function posting(){
+    const postingBackground = document.createElement('div');
+    postingBackground.class = "postingBackground";
+    const postingInput = document.createElement('input');
+    postingInput.type='text';
+    postingBackground.appendChild(postingInput);
+    document.body.appendChild(postingBackground);
+}
