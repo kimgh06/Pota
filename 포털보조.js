@@ -15,6 +15,7 @@ function toggleMenu() {
         menuButton.style.transform = "rotate(-180deg)"
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
         loginDiv.style.display = 'flex';
+        background.classList.remove("hidden");
         background.style.opacity="0.3";
     }
     else {
@@ -24,8 +25,10 @@ function toggleMenu() {
         menuButton.style.transform = "rotate(0deg)"
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
         loginDiv.style.display = 'none';
+        background.classList.add("hidden");
         background.style.opacity="0";
     }
+    menuButton.style.display="block";
 }
 
 function postingButtonToggle() {
@@ -54,11 +57,14 @@ function postingComplete(){
     const finalClick =  confirm("제출하시겠습니까?");
     if(finalClick){
         const newPostTexting = document.querySelector("#postingInput").value;
-        postingArray.push(JSON.stringify(newPostTexting));
-        postingButtonToggle();
+        postingButtonToggle(); //input 해제
         console.log(postingArray); //확인용
-        localStorage.setItem("postingArray", postingArray); //"1: ㅁㄴㅇㄹ"식으로 번호 매기기
-
+        const newPostingArray = {
+            num: countingPost,
+            text: newPostTexting,
+        }
+        postingArray.push(newPostingArray);
+        localStorage.setItem("postingArray", JSON.stringify(postingArray)); //"1: ㅁㄴㅇㄹ"식으로 번호 매기기
         const postings = document.querySelector("#postings");
         const newPostingDiv = document.createElement("div");
         newPostingDiv.id = `post ${countingPost}`;
@@ -66,7 +72,6 @@ function postingComplete(){
         const newPosting = document.createElement("li");
         newPostingDiv.appendChild(newPostingLine);
         newPostingDiv.appendChild(newPosting);
-        newPostingDiv.innerText(newPostTexting);
         countingPost++;
     }
 }
