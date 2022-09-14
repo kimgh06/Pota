@@ -51,7 +51,7 @@ function postingComplete(){
     const finalClick =  confirm("제출하시겠습니까?");
     if(finalClick){
         const newPostTexting = document.querySelector("#postingInput").value;
-        postingArray.push(newPostTexting);
+        postingArray.push(JSON.stringify(newPostTexting));
         postingButtonToggle();
         console.log(postingArray); //확인용
         localStorage.setItem("postingArray", postingArray);
