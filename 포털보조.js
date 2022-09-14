@@ -51,6 +51,7 @@ function postingButtonToggle() {
         postingBackground.appendChild(postingInput);
         postingBackground.appendChild(postingCompleteButton);
         document.body.appendChild(postingBackground);
+        document.querySelector("#postingInput").focus();
     }
 }
 
@@ -71,8 +72,10 @@ function postingComplete(){
         newPostingDiv.id = `post ${countingPost}`;
         const newPostingLine = document.createElement("hr");
         const newPosting = document.createElement("li");
+        newPosting.innerText = newPostTexting;
         newPostingDiv.appendChild(newPostingLine);
         newPostingDiv.appendChild(newPosting);
+        postings.appendChild(newPostingDiv);
         countingPost++;
     }
 }
