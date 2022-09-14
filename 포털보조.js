@@ -30,7 +30,6 @@ function toggleMenu() {
         background.classList.add("hidden");
         background.style.opacity="0";
     }
-    menuButton.style.display="block";
 }
 
 function postingButtonToggle() {
