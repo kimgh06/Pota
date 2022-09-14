@@ -130,4 +130,6 @@ ul hr{
     height: 100%; 
     top: 0%; 
     left:25%;
+    transition: all 0.3s ease;
+    opacity: 0;
 }
