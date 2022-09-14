@@ -1,4 +1,6 @@
 let searchLine = document.querySelector("#searchLine");
+let countingPost = 0;
+let postingArray = [];
 const main = document.querySelector("#main");
 function toggleMenu() {
     const mainside = document.querySelector("#mainside");
@@ -47,5 +49,17 @@ function postingButtonToggle() {
 
 function postingComplete(){
     const finalClick =  confirm("제출하시겠습니까?");
-    console.log(finalClick);
+    if(finalClick){
+        const newPostTexting = document.querySelector("#postingInput").value;
+        postingArray.push(newPostTexting);
+        postingButtonToggle();
+        console.log(postingArray); //확인용
+        localStorage.setItem("postingArray", postingArray);
+        const postings = document.querySelector("#postings");
+        const newPostingDiv = document.createElement("div");
+        newPostingDiv.id = `post ${countingPost}`;
+        const newPostingLine = document.createElement("hr");
+        const newPosting = document.createElement("li");
+        countingPost++;
+    }
 }
