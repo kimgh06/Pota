@@ -14,6 +14,7 @@ function toggleMenu() {
         menuButton.style.color = "black";
         menuButton.style.transform = "rotate(-180deg)"
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
+        sideBar.classList.remove("hidden");
         loginDiv.style.display = 'flex';
         background.classList.remove("hidden");
         background.style.opacity="0.3";
@@ -24,6 +25,7 @@ function toggleMenu() {
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
         menuButton.style.transform = "rotate(0deg)"
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+        sideBar.classList.add("hidden");
         loginDiv.style.display = 'none';
         background.classList.add("hidden");
         background.style.opacity="0";

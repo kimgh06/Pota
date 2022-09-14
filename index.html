@@ -40,49 +40,51 @@
         </div>
     </div>
     <div style="display:flex">
-        <nav id="sideBar">
-            <div>
-                <button id="menuButton" onclick="toggleMenu()">
-                    三
-                </button>
-            </div>
-        <div id="loginDiv" style="display:none">
-            <div>
-                <input type="text" id="loginId" placeholder="Id"><br>
-                <input type="text" id="loginPw" placeholder="Password">
-            </div>
-            <div>
-                <button id="loginButton">
-                    login
-                </button>
-            </div>
-        </div>
-        <div id="mainside" class="hidden">
-            <ul class="link">
-                <li>
-                    <a href="index.html" class="link" title="click here">▶ Main Page ◀</a>
-                </li>
-                <li>
-                    <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To Google
-                        ◀</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/kimgh06/Portal" target="_blank" class="link" title="click here">▶
-                            View
-                            Source Code ◀</a>
+        <div>
+            <button id="menuButton" onclick="toggleMenu()">
+                三
+            </button>
+            <nav id="sideBar" class="hidden">
+                <div id="loginDiv" style="display:none">
+                    <div>
+                        <input type="text" id="loginId" placeholder="Id"><br>
+                        <input type="text" id="loginPw" placeholder="Password">
+                    </div>
+                    <div>
+                        <button id="loginButton">
+                            login
+                        </button>
+                    </div>
+                </div>
+                <div id="mainside" class="hidden">
+                    <ul class="link">
+                        <li>
+                            <a href="index.html" class="link" title="click here">▶ Main Page ◀</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To
+                                Google
+                                ◀</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kimgh06/Portal" target="_blank" class="link"
+                                title="click here">▶
+                                View
+                                Source Code ◀</a>
                         </li>
                     </ul>
-            <div id="end">
-                <ul>
-                    <b>If you<br>Want to<br>Send ideas<br>To me?</b><br>
-                    <li>
-                        E-mail:<br>
-                        kkh061101@naver.com
-                    </li>
-                </ul>
-            </div>
+                    <div id="end">
+                        <ul>
+                            <b>If you<br>Want to<br>Send ideas<br>To me?</b><br>
+                            <li>
+                                E-mail:<br>
+                                kkh061101@naver.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-        </nav>
         <div id="background" class="hidden" onclick="toggleMenu()"></div>
     </div>
     <link rel="stylesheet" href="포털보조.css">
