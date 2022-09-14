@@ -7,6 +7,7 @@ function toggleMenu() {
     const menuButton = document.querySelector("#menuButton");
     const sideBar = document.querySelector("#sideBar");
     const loginDiv = document.querySelector("#loginDiv");
+    const background = document.querySelector("#background");
     if (mainside.classList.contains("hidden")) {
         mainside.classList.remove("hidden");
         menuButton.style.backgroundColor = "white";
@@ -14,6 +15,7 @@ function toggleMenu() {
         menuButton.style.transform = "rotate(-180deg)"
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
         loginDiv.style.display = 'flex';
+        background.classList.remove("hidden");
     }
     else {
         mainside.classList.add("hidden");
@@ -22,6 +24,7 @@ function toggleMenu() {
         menuButton.style.transform = "rotate(0deg)"
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
         loginDiv.style.display = 'none';
+        background.classList.add("hidden");
     }
 }
 
@@ -55,11 +58,15 @@ function postingComplete(){
         postingButtonToggle();
         console.log(postingArray); //확인용
         localStorage.setItem("postingArray", postingArray);
+
         const postings = document.querySelector("#postings");
         const newPostingDiv = document.createElement("div");
         newPostingDiv.id = `post ${countingPost}`;
         const newPostingLine = document.createElement("hr");
         const newPosting = document.createElement("li");
+        newPostingDiv.appendChild(newPostingLine);
+        newPostingDiv.appendChild(newPosting);
+        newPostingDiv.appendChild(newPostTexting);
         countingPost++;
     }
 }
