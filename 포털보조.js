@@ -15,7 +15,7 @@ function toggleMenu() {
         menuButton.style.transform = "rotate(-180deg)"
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
         loginDiv.style.display = 'flex';
-        background.classList.remove("hidden");
+        background.style.opacity="0.3";
     }
     else {
         mainside.classList.add("hidden");
@@ -24,7 +24,7 @@ function toggleMenu() {
         menuButton.style.transform = "rotate(0deg)"
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
         loginDiv.style.display = 'none';
-        background.classList.add("hidden");
+        background.style.opacity="0";
     }
 }
 
@@ -57,7 +57,7 @@ function postingComplete(){
         postingArray.push(JSON.stringify(newPostTexting));
         postingButtonToggle();
         console.log(postingArray); //확인용
-        localStorage.setItem("postingArray", postingArray);
+        localStorage.setItem("postingArray", postingArray); //"1: ㅁㄴㅇㄹ"식으로 번호 매기기
 
         const postings = document.querySelector("#postings");
         const newPostingDiv = document.createElement("div");
@@ -66,7 +66,7 @@ function postingComplete(){
         const newPosting = document.createElement("li");
         newPostingDiv.appendChild(newPostingLine);
         newPostingDiv.appendChild(newPosting);
-        newPostingDiv.appendChild(newPostTexting);
+        newPostingDiv.innerText(newPostTexting);
         countingPost++;
     }
 }
