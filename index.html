@@ -1,80 +1,94 @@
-let searchLine = document.querySelector("#searchLine");
-let countingPost = 0;
-let postingArray = [];
-const main = document.querySelector("#main");
-function toggleMenu() {
-    const mainside = document.querySelector("#mainside");
-    const menuButton = document.querySelector("#menuButton");
-    const sideBar = document.querySelector("#sideBar");
-    const loginDiv = document.querySelector("#loginDiv");
-    const background = document.querySelector("#background");
-    if (mainside.classList.contains("hidden")) {
-        mainside.classList.remove("hidden");
-        menuButton.style.backgroundColor = "white";
-        menuButton.style.color = "black";
-        menuButton.style.transform = "rotate(-180deg)"
-        sideBar.style.backgroundColor = "rgb(105, 191, 225)";
-        sideBar.classList.remove("hidden");
-        loginDiv.style.display = 'flex';
-        background.classList.remove("hidden");
-        background.style.opacity="0.3";
-    }
-    else {
-        mainside.classList.add("hidden");
-        menuButton.style.color = "white";
-        menuButton.style.backgroundColor = "rgb(105, 191, 225)";
-        menuButton.style.transform = "rotate(0deg)"
-        sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
-        sideBar.classList.add("hidden");
-        loginDiv.style.display = 'none';
-        background.classList.add("hidden");
-        background.style.opacity="0";
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
 
-function postingButtonToggle() {
-    if (document.getElementById("postingBackground")) {
-        document.getElementById("postingBackground").remove();
-    }
-    else {
-        const postingBackground = document.createElement('div');
-        postingBackground.id = "postingBackground";
-        const postingInput = document.createElement('input');
-        postingInput.type = 'text';
-        postingInput.placeholder = "입력하기";
-        postingInput.id = "postingInput";
-        postingInput.maxLength = '100';
-        const postingCompleteButton = document.createElement('button');
-        postingCompleteButton.innerText = "완료";
-        postingCompleteButton.id = "postingCompleteButton";
-        postingCompleteButton.onclick = postingComplete;
-        postingBackground.appendChild(postingInput);
-        postingBackground.appendChild(postingCompleteButton);
-        document.body.appendChild(postingBackground);
-    }
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pota</title>
+    </script>
+</head>
 
-function postingComplete(){
-    const finalClick =  confirm("제출하시겠습니까?");
-    if(finalClick){
-        const newPostTexting = document.querySelector("#postingInput").value;
-        postingButtonToggle(); //input 해제
-        console.log(postingArray); //확인용
-        const newPostingArray = {
-            num: countingPost,
-            text: newPostTexting,
-        }
-        postingArray.push(newPostingArray);
-        localStorage.setItem("postingArray", JSON.stringify(postingArray)); //"1: ㅁㄴㅇㄹ"식으로 번호 매기기
-        const postings = document.querySelector("#postings");
-        const newPostingDiv = document.createElement("div");
-        newPostingDiv.id = `post ${countingPost}`;
-        const newPostingLine = document.createElement("hr");
-        const newPosting = document.createElement("li");
-        newPosting.innerText = newPostTexting;
-        newPostingDiv.appendChild(newPostingLine);
-        newPostingDiv.appendChild(newPosting);
-        postings.appendChild(newPostingDiv);
-        countingPost++;
-    }
-}
+<body>
+    <header>
+        <form>
+            <span id="logo">Pota</span>
+            <input id="searchLine" placeholder="Search" type="text" autofocus autocomplete='off' required>
+            <button id="searchButton">Search</button>
+        </form>
+    </header>
+    <div id="main">
+        <div id="mainHead">
+            <span>
+                <b>오늘의 뉴스</b>
+            </span>
+        </div>
+        <div>
+            <tr>
+                <ul id="postings">
+                    <hr>
+                    <li>Breaking News) You're Ugly.</li>
+                    <hr>
+                    <li>Breaking News) Finally, At the school.</li>
+                </ul>
+            </tr>
+        </div>
+        <div>
+            <div id="writing" style="margin:1%; margin-left:85%; ">
+                <button onclick="postingButtonToggle()">글쓰기</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <button id="menuButton" onclick="toggleMenu()">
+                三
+            </button>
+            <nav id="sideBar" class="hidden">
+                <div id="loginDiv" style="display:none">
+                    <div>
+                        <input type="text" id="loginId" placeholder="Id"><br>
+                        <input type="text" id="loginPw" placeholder="Password">
+                    </div>
+                    <div>
+                        <button id="loginButton">
+                            login
+                        </button>
+                    </div>
+                </div>
+                <div id="mainside" class="hidden">
+                    <ul class="link">
+                        <li>
+                            <a href="index.html" class="link" title="click here">▶ Main Page ◀</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To
+                                Google
+                                ◀</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/kimgh06/Portal" target="_blank" class="link"
+                                title="click here">▶
+                                View
+                                Source Code ◀</a>
+                        </li>
+                    </ul>
+                    <div id="end">
+                        <ul>
+                            <b>If you<br>Want to<br>Send ideas<br>To me?</b><br>
+                            <li>
+                                E-mail:<br>
+                                kkh061101@naver.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="background" class="hidden" onclick="toggleMenu()"></div>
+    </div>
+    <link rel="stylesheet" href="포털보조.css">
+    <script src="포털보조.js"></script>
+</body>
+
+</html>
