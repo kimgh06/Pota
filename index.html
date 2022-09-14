@@ -18,33 +18,34 @@
         </form>
     </header>
     <div id="main">
-            <div id="mainHead">
-                <span>
-                    <b>오늘의 뉴스</b>
-                </span>
-            </div>
-            <div>
-                <tr>
-                    <ul>
-                        <hr>
-                        <li>속보) 당신은 못생겼습니다.</li>
-                        <hr>
-                        <li>속보) 드디어 학교로.</li>
-                    </ul>
-                </tr>
-            </div>
+        <div id="mainHead">
+            <span>
+                <b>오늘의 뉴스</b>
+            </span>
+        </div>
+        <div>
+            <tr>
+                <ul id="postings">
+                    <hr>
+                    <li>속보) 당신은 못생겼습니다.</li>
+                    <hr>
+                    <li>속보) 드디어 학교로.</li>
+                </ul>
+            </tr>
+        </div>
         <div>
             <div id="writing" style="margin:1%; margin-left:85%; ">
                 <button onclick="postingButtonToggle()">글쓰기</button>
             </div>
         </div>
     </div>
-    <nav id="sideBar">
-        <div>
-            <button id="menuButton" onclick="toggleMenu()">
-                三
-            </button>
-        </div>
+    <div style="display:flex">
+        <nav id="sideBar">
+            <div>
+                <button id="menuButton" onclick="toggleMenu()">
+                    三
+                </button>
+            </div>
         <div id="loginDiv" style="display:none">
             <div>
                 <input type="text" id="loginId" placeholder="Id"><br>
@@ -64,13 +65,13 @@
                 <li>
                     <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To Google
                         ◀</a>
-                </li>
-                <li>
-                    <a href="https://github.com/kimgh06/Portal" target="_blank" class="link" title="click here">▶
-                        View
-                        Source Code ◀</a>
-                </li>
-            </ul>
+                    </li>
+                    <li>
+                        <a href="https://github.com/kimgh06/Portal" target="_blank" class="link" title="click here">▶
+                            View
+                            Source Code ◀</a>
+                        </li>
+                    </ul>
             <div id="end">
                 <ul>
                     <b>If you<br>Want to<br>Send ideas<br>To me?</b><br>
@@ -81,7 +82,9 @@
                 </ul>
             </div>
         </div>
-    </nav>
+        </nav>
+        <div id="background" onclick="toggleMenu()"></div>
+    </div>
     <link rel="stylesheet" href="포털보조.css">
     <script src="포털보조.js"></script>
 </body>
