@@ -64,6 +64,7 @@ function postingComplete(){
         const newPostingArray = {
             num: countingPost,
             text: newPostTexting,
+            Date: new Date()
         }
         postingArray.push(newPostingArray);
         localStorage.setItem("postingArray", JSON.stringify(postingArray)); //"1: ㅁㄴㅇㄹ"식으로 번호 매기기
@@ -78,4 +79,15 @@ function postingComplete(){
         postings.appendChild(newPostingDiv);
         countingPost++;
     }
+}
+
+function paintPosts(){
+    
+}
+
+const savedPostingArray = localStorage.getItem(postingArray);
+if(savedPostingArray){
+    const parsedPostingArray = JSON.parse(savedPostingArray);
+    postingArray = parsedPostingArray;
+    parsedPostingArray.array.forEach();
 }
