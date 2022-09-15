@@ -17,7 +17,7 @@ function toggleMenu() {
         sideBar.classList.remove("hidden");
         loginDiv.style.display = 'flex';
         background.classList.remove("hidden");
-        background.style.opacity="0.3";
+        background.style.opacity = "0.3";
     }
     else {
         mainside.classList.add("hidden");
@@ -28,7 +28,7 @@ function toggleMenu() {
         sideBar.classList.add("hidden");
         loginDiv.style.display = 'none';
         background.classList.add("hidden");
-        background.style.opacity="0";
+        background.style.opacity = "0";
     }
 }
 
@@ -55,39 +55,40 @@ function postingButtonToggle() {
     }
 }
 
-function postingComplete(){
-    const finalClick =  confirm("제출하시겠습니까?");
-    if(finalClick){
+function postingComplete() {
+    const finalClick = confirm("제출하시겠습니까?");
+    if (finalClick) {
         const newPostTexting = document.querySelector("#postingInput").value;
         postingButtonToggle(); //input 해제
-        console.log(postingArray); //확인용
         const newPostingArray = {
             num: countingPost,
             text: newPostTexting,
             Date: new Date()
         }
         postingArray.push(newPostingArray);
-        localStorage.setItem("postingArray", JSON.stringify(postingArray)); //"1: ㅁㄴㅇㄹ"식으로 번호 매기기
-        const postings = document.querySelector("#postings");
-        const newPostingDiv = document.createElement("div");
-        newPostingDiv.id = `post ${countingPost}`;
-        const newPostingLine = document.createElement("hr");
-        const newPosting = document.createElement("li");
-        newPosting.innerText = newPostTexting;
-        newPostingDiv.appendChild(newPostingLine);
-        newPostingDiv.appendChild(newPosting);
-        postings.appendChild(newPostingDiv);
+        console.log(postingArray); //확인용
+        localStorage.setItem("postingArray", JSON.stringify(postingArray));
+        paintPosts(newPostTexting);
         countingPost++;
+
     }
 }
 
-function paintPosts(){
-    
+function paintPosts(theText) {
+    const postings = document.querySelector("#postings");
+    const newPostingDiv = document.createElement("div");
+    // newPostingDiv.id = `post ${localStorage.getItem(num)}`;
+    const newPostingLine = document.createElement("hr");
+    const newPosting = document.createElement("li");
+    newPosting.innerText = theText;
+    newPostingDiv.appendChild(newPostingLine);
+    newPostingDiv.appendChild(newPosting);
+    postings.appendChild(newPostingDiv);
 }
 
 const savedPostingArray = localStorage.getItem(postingArray);
-if(savedPostingArray){
+if (savedPostingArray) {
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
-    parsedPostingArray.array.forEach();
+    parsedPostingArray.array.forEach(paintPosts);
 }
