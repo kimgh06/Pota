@@ -70,7 +70,6 @@ function postingComplete() {
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
         paintPosts(newPostTexting);
         countingPost++;
-
     }
 }
 
@@ -86,12 +85,10 @@ function paintPosts(theText) {
     postings.appendChild(newPostingDiv);
 }
 
-const savedPostingArray = localStorage.getItem(postingArray);
+const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
-    console.log("true");
+    console.log(JSON.parse(savedPostingArray)); //저장확인용
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
-    parsedPostingArray.array.forEach(paintPosts);
+    parsedPostingArray.forEach(paintPosts);
 }
-
-console.log(postingArray); //저장확인용
