@@ -88,7 +88,10 @@ function paintPosts(theText) {
 
 const savedPostingArray = localStorage.getItem(postingArray);
 if (savedPostingArray) {
+    console.log("true");
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
     parsedPostingArray.array.forEach(paintPosts);
 }
+
+console.log(postingArray); //저장확인용
