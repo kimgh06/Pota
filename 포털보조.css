@@ -103,11 +103,23 @@ ul hr{
     display: flex;
 }
 
+#loginId{
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #999;
+}
+
+#loginPw{
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #999;
+}
+
 #loginButton{
     width:45px;
     height:45px;
     margin-left:3px;
-    margin-top: 4px;
+    margin-top: 3.5px;
     background-color: aquamarine;
     box-shadow: 2px 2px 5px #999;
     border: 1px solid aquamarine;
