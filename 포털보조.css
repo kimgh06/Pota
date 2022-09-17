@@ -88,6 +88,10 @@ ul hr{
     margin-right: 6%;
 }
 
+#writing{
+    margin:1%; 
+    margin-left:85%;}
+
 #end{
     position: fixed;
     bottom: 10px;
