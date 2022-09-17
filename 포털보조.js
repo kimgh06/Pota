@@ -61,25 +61,24 @@ function postingComplete() {
         const newPostTexting = document.querySelector("#postingInput").value;
         postingButtonToggle(); //input 해제
         const newPostingArray = {
-            num: countingPost,
+            num: countingPost++,
             text: newPostTexting,
             Date: new Date()
         }
         postingArray.push(newPostingArray);
         console.log(postingArray); //확인용
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
-        paintPosts(newPostTexting);
-        countingPost++;
+        paintPosts(postingArray);
     }
 }
 
-function paintPosts(theText) {
+function paintPosts(theArray) {
     const postings = document.querySelector("#postings");
     const newPostingDiv = document.createElement("div");
     // newPostingDiv.id = `post ${localStorage.getItem(num)}`;
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
-    newPosting.innerText = theText;
+    newPosting.innerText = theArray.text;
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
     postings.appendChild(newPostingDiv);
