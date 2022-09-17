@@ -123,6 +123,7 @@ ul hr{
     background-color: aquamarine;
     box-shadow: 2px 2px 5px #999;
     border: 1px solid aquamarine;
+    border-radius: 8px;
 }
 
 #postingBackground{
