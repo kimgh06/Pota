@@ -90,4 +90,5 @@ if (savedPostingArray) {
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
     parsedPostingArray.forEach(paintPosts);
+    countingPost = postingArray.length;
 }
