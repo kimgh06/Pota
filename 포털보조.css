@@ -88,6 +88,16 @@ ul hr{
     margin-right: 6%;
 }
 
+.delButton{
+    position: fixed;
+    right: 25%;
+    border: 1px solid aquamarine;
+    background-color: aquamarine;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px #999;
+    text-align: center;
+}
+
 #writing{
     margin:1%; 
     margin-left:85%;}
