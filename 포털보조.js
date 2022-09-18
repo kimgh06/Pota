@@ -75,13 +75,20 @@ function postingComplete() {
 function paintPosts(theArray) {
     const postings = document.querySelector("#postings");
     const newPostingDiv = document.createElement("div");
-    // newPostingDiv.id = `post ${localStorage.getItem(num)}`;
+    newPostingDiv.id = `post ${countingPost++}`;
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
+    const postButton = document.createElement("button");
+    postButton.innerText = "X";
     newPosting.innerText = theArray.text;
+    newPosting.appendChild(postButton);
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
     postings.appendChild(newPostingDiv);
+}
+
+function delAll(){
+
 }
 
 const savedPostingArray = localStorage.getItem("postingArray");
