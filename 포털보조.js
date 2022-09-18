@@ -90,7 +90,7 @@ function paintPosts(theArray) {
 }
 
 function delAll(event){
-    const div = event.target.parentElement;
+    const div = event.target.parentElement.parentElement;
     div.remove();
     postingArray = postingArray.filter((toDo) => parseInt(toDo.id) != parseInt(li.id));
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
