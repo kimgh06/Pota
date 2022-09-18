@@ -78,18 +78,22 @@ function paintPosts(theArray) {
     newPostingDiv.id = `post ${countingPost++}`;
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
+    newPosting.innerText = theArray.text;
     const delButton = document.createElement("button");
     delButton.classList = "delButton";
     delButton.innerText = "X";
-    newPosting.innerText = theArray.text;
+    delButton.addEventListener("click", delAll);
     newPosting.appendChild(delButton);
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
     postings.appendChild(newPostingDiv);
 }
 
-function delAll(){
-
+function delAll(event){
+    const div = event.target.parentElement;
+    div.remove();
+    postingArray = postingArray.filter((toDo) => parseInt(toDo.id) != parseInt(li.id));
+    localStorage.setItem("postingArray", JSON.stringify(postingArray));
 }
 
 const savedPostingArray = localStorage.getItem("postingArray");
