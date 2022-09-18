@@ -78,10 +78,11 @@ function paintPosts(theArray) {
     newPostingDiv.id = `post ${countingPost++}`;
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
-    const postButton = document.createElement("button");
-    postButton.innerText = "X";
+    const delButton = document.createElement("button");
+    delButton.classList = "delButton";
+    delButton.innerText = "X";
     newPosting.innerText = theArray.text;
-    newPosting.appendChild(postButton);
+    newPosting.appendChild(delButton);
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
     postings.appendChild(newPostingDiv);
