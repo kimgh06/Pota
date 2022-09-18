@@ -91,11 +91,12 @@ ul hr{
 .delButton{
     position: fixed;
     right: 25%;
-    border: 1px solid aquamarine;
-    background-color: aquamarine;
+    border: 1px solid rgb(105, 191, 225);
+    background-color: rgb(105, 191, 225); 
     border-radius: 4px;
     box-shadow: 2px 2px 5px #999;
     text-align: center;
+    color: white;
 }
 
 #writing{
