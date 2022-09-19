@@ -49,12 +49,12 @@ function postingButtonToggle() {
         const postingCompleteButton = document.createElement('button');
         postingCompleteButton.innerText = "완료";
         postingCompleteButton.id = "postingCompleteButton";
-        // postingCompleteButton.onclick = postingComplete;
         postingForm.addEventListener("submit", postingComplete);
         postingForm.appendChild(postingInput);
         postingForm.appendChild(postingCompleteButton);
         document.body.appendChild(postingForm);
         document.querySelector("#postingInput").focus();
+        document.querySelector("#postingInput").required = true;
     }
 }
 
