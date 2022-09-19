@@ -103,8 +103,9 @@ function delAll(event) {
 
 function search(event){
     event.preventDefault();
-    const toSearchText = document.querySelector("#searchLine").value;
-
+    const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
+    const item = postingArray[0];
+    alert(item);
 }
 
 const searchForm = document.querySelector("#searchForm");
