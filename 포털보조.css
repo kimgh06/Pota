@@ -115,6 +115,7 @@ ul hr{
     margin-top:16.5px; 
     margin-left: 90px;
     box-shadow: 2px 2px 5px #999;
+    width:10%;
     display: flex;
 }
 
@@ -141,7 +142,7 @@ ul hr{
     border-radius: 8px;
 }
 
-#postingBackground{
+#postingForm{
     margin:3%;
     justify-content: center;
     display: flex;
