@@ -37,8 +37,10 @@ function toggleMenu() {
 function postingButtonToggle() {
     if (document.getElementById("postingForm")) {
         document.getElementById("postingForm").remove();
+        document.querySelector("#writing").innerText = "글쓰기";
     }
     else {
+        document.querySelector("#writing").innerText = "안쓰기";
         const postingForm = document.createElement('form');
         postingForm.id = "postingForm";
         const postingInput = document.createElement('input');
@@ -99,8 +101,10 @@ function delAll(event) {
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
 }
 
-function search(){
-    
+function search(event){
+    event.preventDefault();
+    const toSearchText = document.querySelector("#searchLine").value;
+
 }
 
 const searchForm = document.querySelector("#searchForm");
