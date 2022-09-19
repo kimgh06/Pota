@@ -99,6 +99,13 @@ function delAll(event) {
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
 }
 
+function search(){
+    
+}
+
+const searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", search);
+
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
     console.log(JSON.parse(savedPostingArray)); //저장확인용
