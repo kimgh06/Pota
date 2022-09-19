@@ -37,17 +37,19 @@ function postingButtonToggle() {
         document.getElementById("postingBackground").remove();
     }
     else {
-        const postingBackground = document.createElement('div');
+        const postingBackground = document.createElement('form');
         postingBackground.id = "postingBackground";
         const postingInput = document.createElement('input');
         postingInput.type = 'text';
         postingInput.placeholder = "입력하기";
         postingInput.id = "postingInput";
+        postingInput.required;
         postingInput.maxLength = '100';
         const postingCompleteButton = document.createElement('button');
         postingCompleteButton.innerText = "완료";
         postingCompleteButton.id = "postingCompleteButton";
-        postingCompleteButton.onclick = postingComplete;
+        // postingCompleteButton.onclick = postingComplete;
+        postingCompleteButton.addEventListener("click", postingComplete);
         postingBackground.appendChild(postingInput);
         postingBackground.appendChild(postingCompleteButton);
         document.body.appendChild(postingBackground);
@@ -75,7 +77,7 @@ function postingComplete() {
 function paintPosts(theArray) {
     const postings = document.querySelector("#postings");
     const newPostingDiv = document.createElement("div");
-    newPostingDiv.id = `post ${countingPost++}`;
+    newPostingDiv.id = countingPost++;
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
     newPosting.innerText = theArray.text;
