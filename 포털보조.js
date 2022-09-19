@@ -62,28 +62,23 @@ function postingComplete(event) {
     event.preventDefault();
     const finalClick = confirm("제출하시겠습니까?");
     const newPostTexting = document.querySelector("#postingInput").value;
-    if (finalClick && newPostTexting) {
+    if (finalClick) {
         postingButtonToggle(); //input 해제
         const newPostingArray = {
-            num: countingPost++,
+            id: Date.now(),
             text: newPostTexting,
-            Date: new Date()
         }
-        countingPost = newPostingArray.num;
         postingArray.push(newPostingArray);
         console.log(postingArray); //확인용
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
-        paintPosts(postingArray);
-    }
-    else {
-        alert("빈칸을 작성해주세요");
+        paintPosts(newPostingArray);
     }
 }
 
 function paintPosts(theArray) {
     const postings = document.querySelector("#postings");
     const newPostingDiv = document.createElement("div");
-    newPostingDiv.id = countingPost++;
+    newPostingDiv.id = theArray.id;
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
     newPosting.innerText = theArray.text;
@@ -100,7 +95,7 @@ function paintPosts(theArray) {
 function delAll(event) {
     const div = event.target.parentElement.parentElement;
     div.remove();
-    postingArray = postingArray.filter((post) => parseInt(post.num) != parseInt(div.id));
+    postingArray = postingArray.filter((post) => parseInt(post.id) != parseInt(div.id));
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
 }
 
