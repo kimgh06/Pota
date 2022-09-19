@@ -12,7 +12,8 @@ function toggleMenu() {
         mainside.classList.remove("hidden");
         menuButton.style.backgroundColor = "white";
         menuButton.style.color = "black";
-        menuButton.style.transform = "rotate(-180deg)"
+        menuButton.style.transform = "rotate(-180deg)";
+        menuButton.style.boxShadow = "-2px -2px 5px #999";
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
         sideBar.classList.remove("hidden");
         loginDiv.style.display = 'flex';
@@ -23,7 +24,8 @@ function toggleMenu() {
         mainside.classList.add("hidden");
         menuButton.style.color = "white";
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
-        menuButton.style.transform = "rotate(0deg)"
+        menuButton.style.transform = "rotate(0deg)";
+        menuButton.style.boxShadow = "2px 2px 5px #999";
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
         sideBar.classList.add("hidden");
         loginDiv.style.display = 'none';
@@ -33,44 +35,48 @@ function toggleMenu() {
 }
 
 function postingButtonToggle() {
-    if (document.getElementById("postingBackground")) {
-        document.getElementById("postingBackground").remove();
+    if (document.getElementById("postingForm")) {
+        document.getElementById("postingForm").remove();
     }
     else {
-        const postingBackground = document.createElement('form');
-        postingBackground.id = "postingBackground";
+        const postingForm = document.createElement('form');
+        postingForm.id = "postingForm";
         const postingInput = document.createElement('input');
         postingInput.type = 'text';
         postingInput.placeholder = "입력하기";
         postingInput.id = "postingInput";
-        postingInput.required;
         postingInput.maxLength = '100';
         const postingCompleteButton = document.createElement('button');
         postingCompleteButton.innerText = "완료";
         postingCompleteButton.id = "postingCompleteButton";
         // postingCompleteButton.onclick = postingComplete;
-        postingCompleteButton.addEventListener("click", postingComplete);
-        postingBackground.appendChild(postingInput);
-        postingBackground.appendChild(postingCompleteButton);
-        document.body.appendChild(postingBackground);
+        postingForm.addEventListener("submit", postingComplete);
+        postingForm.appendChild(postingInput);
+        postingForm.appendChild(postingCompleteButton);
+        document.body.appendChild(postingForm);
         document.querySelector("#postingInput").focus();
     }
 }
 
-function postingComplete() {
+function postingComplete(event) {
+    event.preventDefault();
     const finalClick = confirm("제출하시겠습니까?");
-    if (finalClick) {
-        const newPostTexting = document.querySelector("#postingInput").value;
+    const newPostTexting = document.querySelector("#postingInput").value;
+    if (finalClick && newPostTexting) {
         postingButtonToggle(); //input 해제
         const newPostingArray = {
             num: countingPost++,
             text: newPostTexting,
             Date: new Date()
         }
+        countingPost = newPostingArray.num;
         postingArray.push(newPostingArray);
         console.log(postingArray); //확인용
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
         paintPosts(postingArray);
+    }
+    else {
+        alert("빈칸을 작성해주세요");
     }
 }
 
@@ -91,7 +97,7 @@ function paintPosts(theArray) {
     postings.appendChild(newPostingDiv);
 }
 
-function delAll(event){
+function delAll(event) {
     const div = event.target.parentElement.parentElement;
     div.remove();
     postingArray = postingArray.filter((post) => parseInt(post.num) != parseInt(div.id));
