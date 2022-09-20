@@ -106,21 +106,26 @@ function delAll(event) {
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
 }
 
-function search(event){
-    event.preventDefault();
+function search(){
+    let on = 0;
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
     for(let i = 0; i<post.length;i++){
         const posting = post[i].getElementsByClassName("postingSpan");
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
+            post[i].style.display = "flex";
             const postingId = post[i].id;
             console.log(postingId);
+            on = 1;
         }
+        else
+            post[i].style.display = "none";
     }
+    if(!on)
+        console.log("없");
 }
 
 const searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", search);
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
