@@ -91,8 +91,9 @@ ul hr{
 }
 
 .delButton{
-    position: fixed;
-    right: 25%;
+    position: absolute;
+    top:10px;
+    right: 10%;
     border: none;
     background-color: rgb(105, 191, 225); 
     border-radius: 4px;
@@ -103,7 +104,8 @@ ul hr{
 
 #writing{
     margin:1%; 
-    margin-left:85%;}
+    margin-left:85%;
+}
 
 #end{
     position: fixed;
