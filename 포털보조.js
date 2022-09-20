@@ -114,6 +114,7 @@ function search(){
         const posting = post[i].getElementsByClassName("postingSpan");
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
             post[i].style.display = "flex";
+            post[i].style.display = "block";
             const postingId = post[i].id;
             console.log(postingId);
             on = 1;
