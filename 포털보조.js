@@ -113,7 +113,7 @@ function search(event){
     for(let i = 0; i<post.length;i++){
         const posting = post[i].getElementsByClassName("postingSpan");
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
-            const postingId = post[i].;
+            const postingId = post[i].id;
             console.log(postingId);
         }
     }
