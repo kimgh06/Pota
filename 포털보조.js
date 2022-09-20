@@ -81,16 +81,21 @@ function paintPosts(theArray) {
     const postings = document.querySelector("#postings");
     const newPostingDiv = document.createElement("div");
     newPostingDiv.id = theArray.id;
+    newPostingDiv.className = "post";
+    newPostingDiv.style.position = "relative";
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
-    newPosting.innerText = theArray.text;
+    const newPostingSpan = document.createElement("span");
+    newPostingSpan.className = "postingSpan";
+    newPostingSpan.innerText = theArray.text;
     const delButton = document.createElement("button");
     delButton.classList = "delButton";
     delButton.innerText = "X";
     delButton.addEventListener("click", delAll);
-    newPosting.appendChild(delButton);
+    newPosting.appendChild(newPostingSpan);
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
+    newPostingDiv.appendChild(delButton);
     postings.appendChild(newPostingDiv);
 }
 
@@ -104,8 +109,14 @@ function delAll(event) {
 function search(event){
     event.preventDefault();
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
-    const link = `https://www.google.com/search?q=${toSearchText}`;
-    window.open(link);
+    const post = document.getElementsByClassName("post");
+    for(let i = 0; i<post.length;i++){
+        const posting = post[i].getElementsByClassName("postingSpan");
+        if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
+            const postingId = post[i].;
+            console.log(postingId);
+        }
+    }
 }
 
 const searchForm = document.querySelector("#searchForm");
