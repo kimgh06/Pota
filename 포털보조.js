@@ -106,7 +106,8 @@ function delAll(event) {
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
 }
 
-function search(){
+function search(event){
+    event.preventDefault();
     let on = 0;
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
@@ -127,6 +128,7 @@ function search(){
 }
 
 const searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", search)
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
