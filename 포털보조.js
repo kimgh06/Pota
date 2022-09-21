@@ -97,10 +97,12 @@ function paintPosts(theArray) {
     newPostingDiv.appendChild(newPosting);
     newPostingDiv.appendChild(delButton);
     postings.appendChild(newPostingDiv);
+    // const div = document.querySelector(theArray.id);
+    // postings.insertBefore(div, postings.firstChild);
 }
 
 function delAll(event) {
-    const div = event.target.parentElement.parentElement;
+    const div = event.target.parentElement;
     div.remove();
     postingArray = postingArray.filter((post) => parseInt(post.id) != parseInt(div.id));
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
@@ -114,7 +116,6 @@ function search(event){
     for(let i = 0; i<post.length;i++){
         const posting = post[i].getElementsByClassName("postingSpan");
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
-            post[i].style.display = "flex";
             post[i].style.display = "block";
             const postingId = post[i].id;
             console.log(postingId);
