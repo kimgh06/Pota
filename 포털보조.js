@@ -96,7 +96,7 @@ function paintPosts(theArray) {
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
     newPostingDiv.appendChild(delButton);
-    postings.appendChild(newPostingDiv);
+    postings.insertBefore(newPostingDiv,postings.firstChild);
     // const div = document.querySelector(theArray.id);
     // postings.insertBefore(div, postings.firstChild);
 }
