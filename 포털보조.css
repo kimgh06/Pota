@@ -55,6 +55,7 @@ body {
     border:none;
     box-shadow: 2px 2px 5px #999;
     transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
 .hidden{
@@ -79,6 +80,7 @@ body {
     border: 2px solid lightgray;
     background-color: white;
     position: relative;
+    border-radius: 20px;
 }
 
 #mainHead{
