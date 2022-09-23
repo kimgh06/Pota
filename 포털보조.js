@@ -131,8 +131,6 @@ function search(event){
 function searchButtonReact(){
     console.log("됨");
 }
-const searchButton = document.querySelector("#searchButton");
-searchButton.addEventListener("onfocus", searchButtonReact);
 
 const searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", search)
