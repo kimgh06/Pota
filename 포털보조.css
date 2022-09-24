@@ -171,7 +171,7 @@ ul hr{
 }
 
 .postingSpan{
-    width: 80%;
+    width: 90%;
 }
 
 #background{
@@ -198,8 +198,4 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
     background: rgb(245, 245, 220, .1);  /*스크롤바 뒷 배경 색상*/
-}
-
-body::-webkit-inner-spin-button{
-
 }
