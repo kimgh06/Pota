@@ -170,6 +170,10 @@ ul hr{
     height:70px;
 }
 
+.postingSpan{
+    width: 80%;
+}
+
 #background{
     background-color: rgba(112, 112, 112, 0.596); 
     position: fixed; 
@@ -194,4 +198,8 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
     background: rgb(245, 245, 220, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+body::-webkit-inner-spin-button{
+
 }
