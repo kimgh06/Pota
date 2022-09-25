@@ -199,3 +199,10 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
     background: rgb(245, 245, 220, .1);  /*스크롤바 뒷 배경 색상*/
 }
+
+iframe{
+    border:1px solid rgba(255, 255, 255, 0);
+    display: fixed;
+    z-index: 1;
+    margin-left:-0.7%;
+}
