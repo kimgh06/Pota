@@ -85,7 +85,7 @@ function paintPosts(theArray) {
     newPostingDiv.style.position = "relative";
     const newPostingLine = document.createElement("hr");
     const newPosting = document.createElement("li");
-    const newPostingSpan = document.createElement("p");
+    const newPostingSpan = document.createElement("div");
     newPostingSpan.className = "postingSpan";
     newPostingSpan.innerText = theArray.text;
     const delButton = document.createElement("button");
