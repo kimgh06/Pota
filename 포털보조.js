@@ -8,7 +8,10 @@ function toggleMenu() {
     const sideBar = document.querySelector("#sideBar");
     const loginDiv = document.querySelector("#loginDiv");
     const background = document.querySelector("#background");
+    const iframe = document.querySelector("#iframe");
     if (mainside.classList.contains("hidden")) {
+        iframe.style.width = "100vw";
+        iframe.style.height = "100vh";
         mainside.classList.remove("hidden");
         menuButton.style.backgroundColor = "white";
         menuButton.style.color = "black";
@@ -21,6 +24,8 @@ function toggleMenu() {
         background.style.opacity = "0.3";
     }
     else {
+        iframe.style.width = "10vw";
+        iframe.style.height = "10vw";
         mainside.classList.add("hidden");
         menuButton.style.color = "white";
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
@@ -96,7 +101,7 @@ function paintPosts(theArray) {
     newPostingDiv.appendChild(newPostingLine);
     newPostingDiv.appendChild(newPosting);
     newPostingDiv.appendChild(delButton);
-    postings.insertBefore(newPostingDiv,postings.firstChild);
+    postings.insertBefore(newPostingDiv, postings.firstChild);
     // const div = document.querySelector(theArray.id);
     // postings.insertBefore(div, postings.firstChild);
 }
@@ -133,7 +138,7 @@ function searchButtonReact(){
 }
 
 const searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", search)
+searchForm.addEventListener("submit", search);
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
