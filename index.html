@@ -8,6 +8,7 @@
     <title>Pota</title>
     <link rel="stylesheet" href="포털보조.css">
 </head>
+
 <body>
     <header>
         <form id="searchForm">
@@ -24,12 +25,12 @@
         </div>
         <div>
             <tr>
-                <ul id = "notice">
-                    <div id = "1" class = "notice">
+                <ul id="notice">
+                    <div id="1" class="notice">
                         <hr>
                         <li>Notice) You're Ugly.</li>
                     </div>
-                    <div id = "2" class = "notice">
+                    <div id="2" class="notice">
                         <hr>
                         <li>Notice) Finally, At the school.</li>
                     </div>
@@ -40,11 +41,11 @@
             </tr>
         </div>
         <div>
-            <button id ="writing" onclick="postingButtonToggle()">글쓰기</button>
+            <button id="writing" onclick="postingButtonToggle()">글쓰기</button>
         </div>
     </div>
     <script src="포털보조.js"></script>
-    <iframe src = "side.html" width="30%" height="100%"></iframe>
+    <iframe id="iframe" src="side.html" onclick="toggleMenu()"></iframe>
 </body>
 
 </html>
