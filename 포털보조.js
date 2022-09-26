@@ -3,6 +3,7 @@ let countingPost = 0;
 let postingArray = [];
 const main = document.querySelector("#main");
 function toggleMenu() {
+    // sideToggleMenu();
     const mainside = document.querySelector("#mainside");
     const menuButton = document.querySelector("#menuButton");
     const sideBar = document.querySelector("#sideBar");
@@ -10,8 +11,6 @@ function toggleMenu() {
     const background = document.querySelector("#background");
     const iframe = document.querySelector("#iframe");
     if (mainside.classList.contains("hidden")) {
-        iframe.style.width = "100vw";
-        iframe.style.height = "100vh";
         mainside.classList.remove("hidden");
         menuButton.style.backgroundColor = "white";
         menuButton.style.color = "black";
@@ -24,8 +23,6 @@ function toggleMenu() {
         background.style.opacity = "0.3";
     }
     else {
-        iframe.style.width = "10vw";
-        iframe.style.height = "10vw";
         mainside.classList.add("hidden");
         menuButton.style.color = "white";
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
