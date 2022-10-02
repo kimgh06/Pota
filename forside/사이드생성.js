@@ -73,3 +73,4 @@ endDiv.id = "end";
 endDiv.appendChild(endUl);
 
 document.querySelector("#sideBar").appendChild(endDiv);
+
