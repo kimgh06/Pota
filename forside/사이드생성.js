@@ -62,3 +62,4 @@ mainSide.className = "hidden";
 mainSide.appendChild(link);
 
 document.querySelector("#sideBar").appendChild(mainSide);
+
