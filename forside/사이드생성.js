@@ -63,3 +63,13 @@ mainSide.appendChild(link);
 
 document.querySelector("#sideBar").appendChild(mainSide);
 
+const endUl = document.createElement("ul");
+endUl.innerHTML = "<b>If you<br>Want to<br>Send ideas<br>To me?</b><br>";
+const endli = document.createElement("li");
+endli.innerHTML = "E-mail:<br>kkh061101@naver.com";
+endUl.appendChild(endli);
+const endDiv = document.createElement("div");
+endDiv.id = "end";
+endDiv.appendChild(endUl);
+
+document.querySelector("#sideBar").appendChild(endDiv);
