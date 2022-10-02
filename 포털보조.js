@@ -3,7 +3,6 @@ let countingPost = 0;
 let postingArray = [];
 const main = document.querySelector("#main");
 function toggleMenu() {
-    // sideToggleMenu();
     const mainside = document.querySelector("#mainside");
     const menuButton = document.querySelector("#menuButton");
     const sideBar = document.querySelector("#sideBar");
@@ -128,10 +127,6 @@ function search(event){
     }
     if(!on)
         console.log("없");
-}
-
-function searchButtonReact(){
-    console.log("됨");
 }
 
 const searchForm = document.querySelector("#searchForm");

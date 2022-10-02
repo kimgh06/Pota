@@ -1,1 +1,2 @@
-//따로 생성
+const input1 = document.createElement("input");
+console.log("따봉");
