@@ -23,3 +23,42 @@ loginDiv.appendChild(loginInputDiv);
 loginDiv.appendChild(buttonDiv);
 
 document.querySelector("#sideBar").appendChild(loginDiv);
+
+const mainPage = document.createElement("a");
+const li1 = document.createElement("li");
+mainPage.innerText = "▶ Main Page ◀";
+mainPage.href = "index.html";
+mainPage.className = "link";
+mainPage.title = "click here";
+li1.appendChild(mainPage);
+
+const GoGoogle = document.createElement("a");
+const li2 = document.createElement("li");
+GoGoogle.innerText = "▶ Go To Google ◀";
+GoGoogle.href = "https://www.google.com";
+GoGoogle.target="_blank";
+GoGoogle.className = "link";
+GoGoogle.title = "click here";
+li2.appendChild(GoGoogle);
+
+const code = document.createElement("a");
+const li3 = document.createElement("li");
+code.href = "https://kimgh06.github.io/Pota/";
+code.innerText = "View Source Code";
+code.target = "_blank";
+code.className = "link";
+code.title = "click here";
+li3.appendChild(code);
+
+const link = document.createElement("ul");
+link.className = "link";
+link.appendChild(li1);
+link.appendChild(li2);
+link.appendChild(li3);
+
+const mainSide = document.createElement("div");
+mainSide.id = "mainSide";
+mainSide.className = "hidden";
+mainSide.appendChild(link);
+
+document.querySelector("#sideBar").appendChild(mainSide);
