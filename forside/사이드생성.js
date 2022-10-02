@@ -1,3 +1,7 @@
+const sideBar = document.createElement("div");
+sideBar.id = "sideBar";
+sideBar.className = "hidden";
+
 const inputId = document.createElement("input");
 inputId.id = "loginId";
 inputId.placeholder = "Id";
