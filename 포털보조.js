@@ -97,12 +97,15 @@ function search(event){
         console.log("없");
 }
 
-function searchButtonReact(){
+function searchButtonReactOn(){
      console.log("됨");
 }
 
 const searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", search);
+
+const searchButton = document.querySelector("#searchButton");
+searchButton.addEventListener("mouseover", searchButtonReactOn);
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
