@@ -202,16 +202,6 @@ body::-webkit-scrollbar-track {
     background: rgb(245, 245, 220, .1);  /*스크롤바 뒷 배경 색상*/
 }
 
-#iframe{
-    background-color: rgba(255, 0, 0, 0);
-    border:none;
-    position: fixed;
-    left: 0%;
-    top:0%; 
-    width: 10vw;
-    height: 10vh;
-}
-
 #logo{
     text-decoration: none; 
     text-decoration-line: none; 
