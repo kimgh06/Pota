@@ -9,8 +9,9 @@
     height:37px; 
     margin-left: -15px; 
     background-color: aquamarine; 
-    border:2px solid rgb(213, 213, 213,0);
+    border: none;
     border-radius: 10px;
+    transition: all 0.2s ease;
     box-shadow: 2px 2px 5px #999;
 }
 header{

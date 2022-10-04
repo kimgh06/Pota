@@ -87,7 +87,7 @@ function search(event){
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
             post[i].style.display = "block";
             const postingId = post[i].id;
-            console.log(postingId);
+            // console.log(postingId);
             on = 1;
         }
         else
@@ -97,15 +97,20 @@ function search(event){
         console.log("없");
 }
 
+const searchButton = document.querySelector("#searchButton");
+searchButton.addEventListener("mouseover", searchButtonReactOn);
+searchButton.addEventListener("mouseout", searchButtonReactOff);
+
 function searchButtonReactOn(){
-     console.log("됨");
+    searchButton.style.backgroundColor = 'rgb(123, 242, 202)';
+}
+
+function searchButtonReactOff(){
+    searchButton.style.backgroundColor = 'aquamarine';
 }
 
 const searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", search);
-
-const searchButton = document.querySelector("#searchButton");
-searchButton.addEventListener("mouseover", searchButtonReactOn);
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
