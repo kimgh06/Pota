@@ -6,7 +6,7 @@ function loginButtonReactOff(){
     loginButton.style.backgroundColor = 'aquamarine';
 }
 
-document.querySelector("#toInsert").insertAdjacentHTML('afterbegin', `
+document.querySelector("#toInsertSide").insertAdjacentHTML('afterbegin', `
 <div>
     <div>
         <button id="menuButton" onclick="toggleMenu()">
