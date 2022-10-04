@@ -5,8 +5,10 @@
     box-shadow: 2px 2px 5px #999;
     position: flex;
 }
+
 #searchButton{
     height:37px; 
+    width: 60px;
     margin-left: -15px; 
     background-color: aquamarine; 
     border: none;
@@ -14,6 +16,7 @@
     transition: all 0.2s ease;
     box-shadow: 2px 2px 5px #999;
 }
+
 header{
     font-size: 50px; 
     text-align: center;
@@ -25,53 +28,8 @@ body {
     font-family: "Monserrat";
 }
 
-#sideBar{
-    min-width: 280px;
-    position: fixed;
-    float:none;
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    width: 25%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    transition: all 0.5s ease;
-}
-
-#menu{
-    font-size: 20px;
-    color: white;
-}
-
-#menuButton{
-    position: fixed;
-    z-index: 2;
-    top: 20px; 
-    left: 30px; 
-    font-size: 30px; 
-    width:45px; 
-    height: 45px; 
-    color: white;
-    background-color: rgb(105, 191, 225); 
-    border:none;
-    box-shadow: 2px 2px 5px #999;
-    transition: all 0.3s ease;
-    border-radius: 10px;
-}
-
 .hidden{
     display: none;
-}
-
-.link{
-    color:white; 
-    font-size:20px;
-    text-decoration: none; 
-    text-decoration-line: none;
-}
-
-#menu li {
-    margin-top:10px;
 }
 
 #main {
@@ -111,48 +69,6 @@ ul hr{
     margin-left:85%;
 }
 
-#end{
-    position: fixed;
-    bottom: 10px;
-    width:25%;
-    color:white; 
-    font-size:20px;
-}
-
-#loginDiv{
-    margin-top:18px; 
-    margin-left: 85px;
-    display: flex;
-    width: 70px;
-}
-
-#loginId{
-    border: none;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px #999;
-    padding-left: 5px;
-    width: 120px;
-}
-
-#loginPw{
-    border: none;
-    border-radius: 8px;
-    padding-left: 5px;
-    box-shadow: 2px 2px 5px #999;
-    width: 120px;
-}
-
-#loginButton{
-    width:45px;
-    height:45px;
-    margin-left:4px;
-    margin-top: 3px;
-    background-color: aquamarine;
-    box-shadow: 2px 2px 5px #999;
-    border: none;
-    border-radius: 8px;
-}
-
 #postingForm{
     margin:3%;
     justify-content: center;
@@ -175,17 +91,6 @@ ul hr{
 
 .postingSpan{
     width: 90%;
-}
-
-#background{
-    background-color: rgba(112, 112, 112, 0.596); 
-    position: fixed; 
-    width: 100%; 
-    height: 100%; 
-    top: 0%; 
-    left:25%;
-    transition: all 0.5s ease;
-    opacity: 0;
 }
 
 body::-webkit-scrollbar { 
