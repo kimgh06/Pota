@@ -1,3 +1,11 @@
+function loginButtonReactOn(){
+    loginButton.style.backgroundColor = 'rgb(123, 242, 202)';
+}
+
+function loginButtonReactOff(){
+    loginButton.style.backgroundColor = 'aquamarine';
+}
+
 document.querySelector("#toInsert").insertAdjacentHTML('afterbegin', `
 <div>
     <div>
@@ -82,14 +90,6 @@ function toggleMenu() {
     }
 }
 
-// const loginButton = document.querySelector("#loginButton");
-// loginButton.addEventListener("mouseover", loginButtonReactOn);
-// loginButton.addEventListener("mouseout", loginButtonReactOff);
-
-// function loginButtonReactOn(){
-//     loginButton.style.backgroundColor = 'rgb(123, 242, 202)';
-// }
-
-// function loginButtonReactOff(){
-//     loginButton.style.backgroundColor = 'aquamarine';
-// }
+const loginButton = document.querySelector("#loginButton");
+loginButton.addEventListener("mouseover", loginButtonReactOn);
+loginButton.addEventListener("mouseout", loginButtonReactOff);
