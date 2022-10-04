@@ -97,16 +97,16 @@ function search(event){
         console.log("없");
 }
 
-const searchButton = document.querySelector("#searchButton");
-searchButton.addEventListener("mouseover", searchButtonReactOn);
-searchButton.addEventListener("mouseout", searchButtonReactOff);
+const loginButton = document.querySelector("#searchButton");
+loginButton.addEventListener("mouseover", searchButtonReactOn);
+loginButton.addEventListener("mouseout", searchButtonReactOff);
 
 function searchButtonReactOn(){
-    searchButton.style.backgroundColor = 'rgb(123, 242, 202)';
+    loginButton.style.backgroundColor = 'rgb(123, 242, 202)';
 }
 
 function searchButtonReactOff(){
-    searchButton.style.backgroundColor = 'aquamarine';
+    loginButton.style.backgroundColor = 'aquamarine';
 }
 
 const searchForm = document.querySelector("#searchForm");
