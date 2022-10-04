@@ -125,3 +125,13 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
     background: rgb(245, 245, 220, .1);  /*스크롤바 뒷 배경 색상*/
 }
+
+#toLogin{
+    margin-top: 3px;
+    width:120px;
+    height: 45px;
+    background-color: white;
+    border:none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #999;
+}

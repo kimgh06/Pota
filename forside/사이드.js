@@ -55,7 +55,8 @@ document.querySelector("#toInsertSide").insertAdjacentHTML('afterbegin', `
     </div>
 </div>
 <div id="background" class="hidden" onclick="toggleMenu()"></div>
-</div>`);
+</div>
+`);
 
 function toggleMenu() {
     const mainside = document.querySelector("#mainside");
