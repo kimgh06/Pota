@@ -211,3 +211,9 @@ body::-webkit-scrollbar-track {
     width: 10vw;
     height: 10vh;
 }
+
+#logo{
+    text-decoration: none; 
+    text-decoration-line: none; 
+    color:black;
+}
