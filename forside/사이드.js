@@ -47,4 +47,38 @@ document.querySelector("#toInsert").insertAdjacentHTML('afterbegin', `
     </div>
 </div>
 <div id="background" class="hidden" onclick="toggleMenu()"></div>
-</div>`)
+</div>`);
+
+
+function toggleMenu() {
+    const mainside = document.querySelector("#mainside");
+    const menuButton = document.querySelector("#menuButton");
+    const sideBar = document.querySelector("#sideBar");
+    const loginDiv = document.querySelector("#loginDiv");
+    const background = document.querySelector("#background");
+    const iframe = document.querySelector("#iframe");
+    if (mainside.classList.contains("hidden")) {
+        mainside.classList.remove("hidden");
+        menuButton.style.backgroundColor = "white";
+        menuButton.style.color = "black";
+        menuButton.style.transform = "rotate(-180deg)";
+        menuButton.style.boxShadow = "-2px -2px 5px #999";
+        sideBar.style.backgroundColor = "rgb(105, 191, 225)";
+        sideBar.classList.remove("hidden");
+        loginDiv.style.display = 'flex';
+        background.classList.remove("hidden");
+        background.style.opacity = "0.3";
+    }
+    else {
+        mainside.classList.add("hidden");
+        menuButton.style.color = "white";
+        menuButton.style.backgroundColor = "rgb(105, 191, 225)";
+        menuButton.style.transform = "rotate(0deg)";
+        menuButton.style.boxShadow = "2px 2px 5px #999";
+        sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
+        sideBar.classList.add("hidden");
+        loginDiv.style.display = 'none';
+        background.classList.add("hidden");
+        background.style.opacity = "0";
+    }
+}
