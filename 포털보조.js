@@ -97,6 +97,10 @@ function search(event){
         console.log("없");
 }
 
+function searchButtonReact(){
+     console.log("됨");
+}
+
 const searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", search);
 
