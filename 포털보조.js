@@ -66,8 +66,6 @@ function paintPosts(theArray) {
     newPostingDiv.appendChild(newPosting);
     newPostingDiv.appendChild(delButton);
     postings.insertBefore(newPostingDiv, postings.firstChild);
-    // const div = document.querySelector(theArray.id);
-    // postings.insertBefore(div, postings.firstChild);
 }
 
 function delAll(event) {
@@ -87,7 +85,6 @@ function search(event){
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
             post[i].style.display = "block";
             const postingId = post[i].id;
-            // console.log(postingId);
             on = 1;
         }
         else
