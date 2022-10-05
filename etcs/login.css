@@ -67,6 +67,10 @@ body{
     border: 1px solid black;
 }
 
+#wrapLoginSpan{
+    margin:15px;
+}
+
 #loginSpan{
     font-size: 30px;
 }
