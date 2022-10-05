@@ -26,14 +26,12 @@ body{
 
 #headerDiv{
     margin: auto;
-    width:150px;
+    width:130px;
     border-radius: 20px;
-    border: 1px solid rgb(123, 242, 202);
-    background-color: aquamarine;
 }
 
 #wrapLoginDiv{
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 #toLoginDiv{
@@ -52,9 +50,23 @@ body{
     width: 70%;
     margin-left: auto;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 #pwDiv{
+    margin-top:30px;
+    height: 25px;
     display: flex;
     width:100%;
+}
+
+#pw{
+    width: 70%;
+    margin-left: auto;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+#loginSpan{
+    font-size: 30px;
 }
