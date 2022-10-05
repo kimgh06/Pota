@@ -6,53 +6,56 @@ function loginButtonReactOff(){
     loginButton.style.backgroundColor = 'aquamarine';
 }
 
-document.querySelector("#toInsertSide").insertAdjacentHTML('afterbegin', `
+document.querySelector("#toInsertSide").insertAdjacentHTML('afterbegin', `<div>
 <div>
-    <div>
-        <button id="menuButton" onclick="toggleMenu()">
-            <b>三</b>
-        </button>
-        <div id="sideBar" class="hidden">
-            <div id="loginDiv" style="display:none">
-                <div>
-                    <input type="text" id="loginId" placeholder="Id"><br>
-                    <input type="text" id="loginPw" placeholder="Password">
-                </div>
-                <div>
+    <button id="menuButton" onclick="toggleMenu()">
+        <b>三</b>
+    </button>
+    <div id="sideBar" class="hidden">
+        <div id="loginDiv" style="display:none">
+            <div id = "logined" class="hidden">
+                <!-- <input type="text" id="loginId" placeholder="Id"><br>
+                <input type="text" id="loginPw" placeholder="Password"> -->
+                <!-- <button id="toLogin">로그인하기</button> -->
+                good
+            </div>
+            <div>
+                <a>
                     <button id="loginButton">
-                        login
+                        Login
                     </button>
-                </div>
-            </div>
-            <div id="mainside" class="hidden">
-                <ul class="link">
-                    <li>
-                        <a href="index.html" class="link" title="click here">▶ Main Page ◀</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To
-                            Google
-                            ◀</a>
-                    </li>
-                    <li>
-                        <a href="https://kimgh06.github.io/Pota/" target="_blank" class="link"
-                            title="click here">▶
-                            View
-                            Source Code ◀</a>
-                    </li>
-                </ul>
-            </div>
-            <div id="end">
-                <ul>
-                    <b>If you<br>Want to<br>Send ideas<br>To me?</b><br>
-                    <li>
-                        E-mail:<br>
-                        kkh061101@naver.com
-                    </li>
-                </ul>
+                </a>
             </div>
         </div>
+        <div id="mainside" class="hidden">
+            <ul class="link">
+                <li>
+                    <a href="index.html" class="link" title="click here">▶ Main Page ◀</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com" target="_blank" class="link" title="click here">▶ Go To
+                        Google
+                        ◀</a>
+                </li>
+                <li>
+                    <a href="https://kimgh06.github.io/Pota/" target="_blank" class="link"
+                        title="click here">▶
+                        View
+                        Source Code ◀</a>
+                </li>
+            </ul>
+        </div>
+        <div id="end">
+            <ul>
+                <b>If you<br>Want to<br>Send ideas<br>To me?</b><br>
+                <li>
+                    E-mail:<br>
+                    kkh061101@naver.com
+                </li>
+            </ul>
+        </div>
     </div>
+</div>
 </div>
 <div id="background" class="hidden" onclick="toggleMenu()"></div>
 </div>
