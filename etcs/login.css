@@ -48,13 +48,15 @@ body{
 }
 
 #id{
-    width: 70%;
-    margin-left: auto;
+    width: 30%;
+    margin: auto;
     border-radius: 10px;
     border: 2px solid black;
+    transition: all 0.2s ease;
 }
 
 #id:focus{
+    width: 70%;
     border:none;
     outline: 2px solid rgb(105, 191, 225);
 }
@@ -67,13 +69,15 @@ body{
 }
 
 #pw{
-    width: 70%;
-    margin-left: auto;
+    width: 30%;
+    margin: auto;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 2px solid black;    
+    transition: all 0.2s ease;
 }
 
 #pw:focus{
+    width: 70%;
     border: none;
     outline: 2px solid rgb(105, 191, 225);
 }
