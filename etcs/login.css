@@ -32,6 +32,7 @@ body{
 
 #wrapLoginDiv{
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #toLoginDiv{
@@ -73,6 +74,20 @@ body{
 
 #loginSpan{
     font-size: 30px;
+}
+
+#wrapSubmit{
+    margin-top: 30px;
+}
+
+#submitLogin{
+    margin:auto;
+    height: 50px;
+}
+
+#submitButton{
+    width: 50%;
+    height: 100%;
 }
 
 body::-webkit-scrollbar { 
