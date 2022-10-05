@@ -51,7 +51,12 @@ body{
     width: 70%;
     margin-left: auto;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
+}
+
+#id:focus{
+    border:none;
+    outline: 2px solid rgb(105, 191, 225);
 }
 
 #pwDiv{
@@ -65,7 +70,12 @@ body{
     width: 70%;
     margin-left: auto;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
+}
+
+#pw:focus{
+    border: none;
+    outline: 2px solid rgb(105, 191, 225);
 }
 
 #wrapLoginSpan{
