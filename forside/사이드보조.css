@@ -90,7 +90,7 @@
 }
 
 #loginButton{
-    width:45px;
+    width:160px;
     height:45px;
     margin-left:4px;
     margin-top: 3px;
@@ -98,6 +98,7 @@
     box-shadow: 2px 2px 5px #999;
     border: none;
     border-radius: 8px;
+    font-size: 15px;
 }
 
 #background{
