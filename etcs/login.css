@@ -16,3 +16,18 @@ body{
     position: relative;
     border-radius: 20px;
 }
+
+#header{
+    font-size: 50px;
+    text-decoration: none; 
+    text-decoration-line: none; 
+    color:black;
+}
+
+#headerDiv{
+    margin: auto;
+    width:150px;
+    border-radius: 20px;
+    border: 1px solid rgb(123, 242, 202);
+    background-color: aquamarine;
+}
