@@ -31,3 +31,30 @@ body{
     border: 1px solid rgb(123, 242, 202);
     background-color: aquamarine;
 }
+
+#wrapLoginDiv{
+    margin-top: 20px;
+}
+
+#toLoginDiv{
+    flex-direction: column;
+    width: 60%;
+    margin:auto;
+}
+
+#idDiv{
+    height: 25px;
+    display: flex;
+    width: 100%;
+}
+
+#id{
+    width: 70%;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+#pwDiv{
+    display: flex;
+    width:100%;
+}
