@@ -40,6 +40,7 @@ body {
     background-color: white;
     position: relative;
     border-radius: 20px;
+    z-index: -2;
 }
 
 #mainHead{
@@ -74,6 +75,7 @@ ul hr{
     border:none;
     border-radius: 10px;
     color:white;
+    z-index: -1;
 }
 
 #postingForm{
