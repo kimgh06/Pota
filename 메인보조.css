@@ -40,7 +40,6 @@ body {
     background-color: white;
     position: relative;
     border-radius: 20px;
-    z-index: -2;
 }
 
 #mainHead{
@@ -68,14 +67,13 @@ ul hr{
 #writing{
     position: absolute;
     right: 11%;
-    bottom:0.5%;
+    bottom: 5%;
     height: 30px;
     box-shadow: 2px 2px 5px #999;    
     background-color: rgb(105, 191, 225); 
     border:none;
     border-radius: 10px;
     color:white;
-    z-index: -1;
 }
 
 #postingForm{
@@ -133,6 +131,7 @@ body::-webkit-scrollbar-track {
 
 #pageButtons{
     margin:auto;
+    margin-top:25px;
 }
 
 .pageButton{
