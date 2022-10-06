@@ -101,6 +101,10 @@
     font-size: 15px;
 }
 
+#loginButton:hover{
+    background-color: rgb(123, 242, 202);
+}
+
 #background{
     background-color: rgba(112, 112, 112, 0.596); 
     position: fixed; 

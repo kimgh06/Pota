@@ -1,11 +1,3 @@
-function loginButtonReactOn(){
-    loginButton.style.backgroundColor = 'rgb(123, 242, 202)';
-}
-
-function loginButtonReactOff(){
-    loginButton.style.backgroundColor = 'aquamarine';
-}
-
 document.querySelector("#toInsertSide").insertAdjacentHTML('afterbegin', `<div>
 <div>
     <button id="menuButton" onclick="toggleMenu()">
@@ -93,7 +85,3 @@ function toggleMenu() {
         background.style.opacity = "0";
     }
 }
-
-const loginButton = document.querySelector("#loginButton");
-loginButton.addEventListener("mouseover", loginButtonReactOn);
-loginButton.addEventListener("mouseout", loginButtonReactOff);
