@@ -129,10 +129,11 @@ body::-webkit-scrollbar-track {
 }
 
 .pageButton{
-    width: 70px;
+    width: 60px;
     margin: 4px;
-    height: 50px;
-    font-size: 50px;
+    height: 40px;
+    line-height: 25px;
+    font-size: 30px;
     align-items: center;
     justify-content: center;  
 }
