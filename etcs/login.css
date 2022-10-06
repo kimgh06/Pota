@@ -115,6 +115,10 @@ body{
     color: white;
 }
 
+#submitButton:hover{
+    background-color: rgb(99, 179, 211);
+}
+
 body::-webkit-scrollbar { 
     width: 12px;  /* 스크롤바의 너비 */
 }
