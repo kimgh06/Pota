@@ -66,9 +66,14 @@ ul hr{
 
 #writing{
     position: absolute;
-    right: 13%;
+    right: 11%;
     bottom:0.5%;
     height: 30px;
+    box-shadow: 2px 2px 5px #999;    
+    background-color: rgb(105, 191, 225); 
+    border:none;
+    border-radius: 10px;
+    color:white;
 }
 
 #postingForm{
@@ -132,8 +137,12 @@ body::-webkit-scrollbar-track {
     width: 60px;
     margin: 4px;
     height: 40px;
-    line-height: 25px;
+    line-height: 20px;
     font-size: 30px;
     align-items: center;
     justify-content: center;  
+    box-shadow: 2px 2px 5px #999;
+    background-color: aquamarine;
+    border:none;
+    border-radius: 20px;
 }
