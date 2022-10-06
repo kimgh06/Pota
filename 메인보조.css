@@ -114,3 +114,7 @@ body::-webkit-scrollbar-track {
     text-decoration-line: none; 
     color:black;
 }
+
+#searchButton:hover{
+    background-color: rgb(123, 242, 202);
+}
