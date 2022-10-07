@@ -64,7 +64,7 @@ function toggleMenu() {
         mainside.classList.remove("hidden");
         menuButton.style.backgroundColor = "white";
         menuButton.style.color = "black";
-        menuButton.style.transform = "rotate(-180deg)";
+        menuButton.style.transform = "rotateZ(-180deg)";
         menuButton.style.boxShadow = "-2px -2px 5px #999";
         sideBar.style.backgroundColor = "rgb(105, 191, 225)";
         sideBar.classList.remove("hidden");
@@ -76,7 +76,7 @@ function toggleMenu() {
         mainside.classList.add("hidden");
         menuButton.style.color = "white";
         menuButton.style.backgroundColor = "rgb(105, 191, 225)";
-        menuButton.style.transform = "rotate(0deg)";
+        menuButton.style.transform = "rotateZ(0deg)";
         menuButton.style.boxShadow = "2px 2px 5px #999";
         sideBar.style.backgroundColor = "rgba(255, 255, 255, 0)";
         sideBar.classList.add("hidden");
