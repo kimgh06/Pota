@@ -147,3 +147,7 @@ body::-webkit-scrollbar-track {
     border:none;
     border-radius: 20px;
 }
+
+.pageButton:hover{
+    background-color: rgb(123, 242, 202);
+}
