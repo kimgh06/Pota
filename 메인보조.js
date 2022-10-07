@@ -17,6 +17,7 @@ function postingButtonToggle() {
         postingInput.placeholder = "입력하기";
         postingInput.id = "postingInput";
         postingInput.maxLength = '100';
+        postingInput.autocomplete = 'off';
         const postingCompleteButton = document.createElement('button');
         postingCompleteButton.innerText = "완료";
         postingCompleteButton.id = "postingCompleteButton";
