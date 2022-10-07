@@ -1,6 +1,7 @@
 let searchLine = document.querySelector("#searchLine");
 let countingPost = 0;
 let postingArray = [];
+let pages = 0;
 const main = document.querySelector("#main");
 
 function postingButtonToggle() {
@@ -96,11 +97,18 @@ function search(event){
 }
 
 function pageLeft(){
-    console.log("left");
+    if (pages > 0){
+        pages--;
+        console.log(pages);
+    }
+    else {
+        console.log("impossible");
+    }
 }
 
 function pageRight(){
-    console.log("Right");
+    pages++;
+    console.log(pages);
 }
 
 const searchForm = document.querySelector("#searchForm");
