@@ -19,8 +19,13 @@ function pwPlaceholderFocusOff(){
 function login(){
     if(cnt<5)
         alert("아직 안돼요");
-    else
+    else if(cnt<10)
         alert("안된다니까.");
+    else if(cnt<20)
+        alert("그만해");
+    else
+        alert("404 NOT FOUND.");
+    cnt++;
 }
 
 const id = document.querySelector("#id");
