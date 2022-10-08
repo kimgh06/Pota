@@ -1,3 +1,5 @@
+let cnt = 0;
+
 function idPlaceholderFocusOn(){
     id.placeholder = "";
 }
@@ -15,7 +17,10 @@ function pwPlaceholderFocusOff(){
 }
 
 function login(){
-    alert("아직 안돼요");
+    if(cnt<5)
+        alert("아직 안돼요");
+    else
+        alert("안된다니까.");
 }
 
 const id = document.querySelector("#id");
