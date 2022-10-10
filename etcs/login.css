@@ -54,7 +54,7 @@ body{
 }
 
 #id{
-    width: 30%;
+    width: 35%;
     margin: auto;
     border-radius: 10px;
     border: 2px solid black;
@@ -62,7 +62,7 @@ body{
 }
 
 #id:focus{
-    width: 70%;
+    width: 65%;
     border:none;
     outline: 2px solid rgb(105, 191, 225);
 }
@@ -75,7 +75,7 @@ body{
 }
 
 #pw{
-    width: 30%;
+    width: 35%;
     margin: auto;
     border-radius: 10px;
     border: 2px solid black;    
@@ -83,7 +83,7 @@ body{
 }
 
 #pw:focus{
-    width: 70%;
+    width: 65%;
     border: none;
     outline: 2px solid rgb(105, 191, 225);
 }
@@ -113,6 +113,10 @@ body{
     border:none;
     background-color: rgb(105, 191, 225);
     color: white;
+}
+
+#forgotPassword{
+    font-size: 15px;
 }
 
 #submitButton:hover{
