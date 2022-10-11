@@ -58,7 +58,7 @@ body {
 }
 
 .notice ::marker{
-    color: aquamarine;
+    color: rgb(105, 191, 225);
 }
 
 ul hr{
