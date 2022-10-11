@@ -2,7 +2,7 @@ body{
     background-color: beige;
 }
 
-#wrapMain{
+header{
     text-align: center;
     margin-top: 3%;
 }
@@ -89,6 +89,7 @@ body{
 }
 
 #wrapLoginSpan{
+    text-align: center;
     margin:15px;
 }
 
@@ -97,6 +98,7 @@ body{
 }
 
 #wrapSubmit{
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -116,6 +118,7 @@ body{
 }
 
 #forgotPassword{
+    top:3%;
     font-size: 15px;
 }
 
