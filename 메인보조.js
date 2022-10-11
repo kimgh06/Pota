@@ -2,6 +2,8 @@ let searchLine = document.querySelector("#searchLine");
 let countingPost = 0;
 let postingArray = [];
 let pages = 1;
+let maxColumn = pages * 15;
+let minColumn = (pages - 1) * 15;
 const main = document.querySelector("#main");
 
 function postingButtonToggle() {
@@ -124,6 +126,7 @@ if (savedPostingArray) {
     console.log(JSON.parse(savedPostingArray)); //저장확인용
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
+
     parsedPostingArray.forEach(paintPosts);
     countingPost = postingArray.length;
 }

@@ -1,15 +1,20 @@
 #searchLine{
     width: 60%; 
     height: 30px; 
-    border: 2px solid skyblue;
+    border: none;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px #999;
     position: flex;
 }
 
+#searchLine:focus{
+    outline: 2px solid black;
+}
+
 #searchButton{
-    height:37px; 
+    height:35px; 
     width: 60px;
-    margin-left: -15px; 
+    margin-left: -13px; 
     background-color: aquamarine; 
     border: none;
     border-radius: 10px;
