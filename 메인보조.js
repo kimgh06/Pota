@@ -121,12 +121,17 @@ function pageRight(){
 const searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", search);
 
+const pageLabel = document.querySelector("#pageLabel");
+pageLabel.innerText = pages;
+
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
     console.log(JSON.parse(savedPostingArray)); //저장확인용
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
-
-    parsedPostingArray.forEach(paintPosts);
+    for(let i = minColumn; i < maxColumn; i++){
+        paintPosts(parsedPostingArray[i]);
+    }
+    // parsedPostingArray.forEach(paintPosts);
     countingPost = postingArray.length;
 }
