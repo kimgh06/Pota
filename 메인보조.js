@@ -106,6 +106,7 @@ function pageLeft(){
     else {
         console.log("pages < 1 is impossible");
     }
+    pageLabel.innerText = pages;
 }
 
 function pageRight(){
@@ -116,6 +117,7 @@ function pageRight(){
     else{
         console.log("impossible", postingArray.length, "<", pages * 15);
     }
+    pageLabel.innerText = pages;
 }
 
 const searchForm = document.querySelector("#searchForm");
