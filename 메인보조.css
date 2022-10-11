@@ -154,6 +154,10 @@ body::-webkit-scrollbar-track {
     margin-top:25px;
 }
 
+#pageLabel{
+    font-size: 20px;
+}
+
 .pageButton{
     width: 60px;
     margin: 4px;
