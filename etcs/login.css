@@ -117,9 +117,13 @@ header{
     color: white;
 }
 
-#forgotPassword{
+#forgotPasswordDiv{
     margin-top:5%;
     font-size: 15px;
+}
+
+#forgotPassword{
+    color: rgb(105, 191, 225);
 }
 
 #submitButton:hover{
