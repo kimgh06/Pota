@@ -2,8 +2,8 @@ let searchLine = document.querySelector("#searchLine");
 let countingPost = 0;
 let postingArray = [];
 let pages = 1;
-let maxColumn = pages * 15;
-let minColumn = (pages - 1) * 15;
+let maxColumn;
+let minColumn;
 const main = document.querySelector("#main");
 
 function postingButtonToggle() {
@@ -44,7 +44,6 @@ function postingComplete(event) {
             text: newPostTexting,
         }
         postingArray.push(newPostingArray);
-        console.log(postingArray); //확인용
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
         paintPosts(newPostingArray);
     }
@@ -94,8 +93,6 @@ function search(event){
         else
             post[i].style.display = "none";
     }
-    if(!on)
-        console.log("없");
 }
 
 function pageLeft(){
@@ -107,6 +104,8 @@ function pageLeft(){
         console.log("pages < 1 is impossible");
     }
     pageLabel.innerText = pages;
+    maxColumn = localStorage.getItem("postingArray").length - ((pages - 1) * 15);
+    minColumn = localStorage.getItem("postingArray").length - (pages * 15);
 }
 
 function pageRight(){
@@ -118,6 +117,8 @@ function pageRight(){
         console.log("impossible", postingArray.length, "<", pages * 15);
     }
     pageLabel.innerText = pages;
+    maxColumn = localStorage.getItem("postingArray").length - ((pages - 1) * 15);
+    minColumn = localStorage.getItem("postingArray").length - (pages * 15);
 }
 
 const searchForm = document.querySelector("#searchForm");
@@ -128,12 +129,17 @@ pageLabel.innerText = pages;
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
+    settings();
+}
+
+function settings(){
     console.log(JSON.parse(savedPostingArray)); //저장확인용
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
+    let maxColumn = postingArray.length - ((pages - 1) * 15);
+    let minColumn = postingArray.length - (pages * 15);
     for(let i = minColumn; i < maxColumn; i++){
         paintPosts(parsedPostingArray[i]);
     }
-    // parsedPostingArray.forEach(paintPosts);
     countingPost = postingArray.length;
 }
