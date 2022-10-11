@@ -48,12 +48,14 @@ header{
 }
 
 #idDiv{
+    font-size: 20px;
     height: 25px;
     display: flex;
     width: 100%;
 }
 
-#id{
+#id{    
+    height:20px;
     width: 35%;
     margin: auto;
     border-radius: 10px;
@@ -68,6 +70,7 @@ header{
 }
 
 #pwDiv{
+    font-size: 20px;
     margin-top:30px;
     height: 25px;
     display: flex;
@@ -75,6 +78,7 @@ header{
 }
 
 #pw{
+    height:20px;
     width: 35%;
     margin: auto;
     border-radius: 10px;
