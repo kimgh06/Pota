@@ -18,9 +18,12 @@
     background-color: aquamarine; 
     border: none;
     border-radius: 10px;
-    background-color: rgb(123, 242, 202);
     transition: all 0.2s ease;
     box-shadow: 2px 2px 5px #999;
+}
+
+#searchButton:hover{
+    background-color: rgb(123, 242, 202);
 }
 
 header{
