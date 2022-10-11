@@ -98,10 +98,9 @@ function search(event){
 function pageLeft(){
     if (pages > 1){
         pages--;
-        console.log(pages);
     }
     else {
-        console.log("pages < 1 is impossible");
+        alert("불가능합니다.");
     }
     pageLabel.innerText = pages;
     settings();
@@ -110,10 +109,9 @@ function pageLeft(){
 function pageRight(){
     if(postingArray.length - pages * columnLength > 0){
         pages++;
-        console.log(pages);
     }
     else{
-        console.log("impossible", postingArray.length, "<", pages * columnLength);
+        alert("불가능합니다.");
     }
     pageLabel.innerText = pages;
     settings();
