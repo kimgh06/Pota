@@ -4,6 +4,7 @@ let postingArray = [];
 let pages = 1;
 let maxColumn;
 let minColumn;
+const columnLength = 15;
 const main = document.querySelector("#main");
 
 function postingButtonToggle() {
@@ -104,22 +105,22 @@ function pageLeft(){
         console.log("pages < 1 is impossible");
     }
     pageLabel.innerText = pages;
-    maxColumn = postingArray.length - ((pages - 1) * 15);
-    minColumn = postingArray.length - (pages * 15) > 0 ? postingArray.length - (pages * 15) : 0;
+    maxColumn = postingArray.length - ((pages - 1) * columnLength);
+    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
     settings();
 }
 
 function pageRight(){
-    if(postingArray.length - pages * 15 > 0){
+    if(postingArray.length - pages * columnLength > 0){
         pages++;
         console.log(pages);
     }
     else{
-        console.log("impossible", postingArray.length, "<", pages * 15);
+        console.log("impossible", postingArray.length, "<", pages * columnLength);
     }
     pageLabel.innerText = pages;
-    maxColumn = postingArray.length - ((pages - 1) * 15);    
-    minColumn = postingArray.length - (pages * 15) > 0 ? postingArray.length - (pages * 15) : 0;
+    maxColumn = postingArray.length - ((pages - 1) * columnLength);    
+    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
     settings();
 }
 
@@ -139,8 +140,8 @@ function settings(){
     document.querySelector("#postings").innerHTML = '';
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
-    maxColumn = postingArray.length - ((pages - 1) * 15);
-    minColumn = postingArray.length - (pages * 15) > 0 ? postingArray.length - (pages * 15) : 0;
+    maxColumn = postingArray.length - ((pages - 1) * columnLength);
+    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
     for(let i = minColumn; i < maxColumn; i++){
         paintPosts(parsedPostingArray[i]);
     }
