@@ -102,7 +102,6 @@ function pageLeft(){
     else {
         alert("불가능합니다.");
     }
-    pageLabel.innerText = pages;
     settings();
 }
 
@@ -113,7 +112,6 @@ function pageRight(){
     else{
         alert("불가능합니다.");
     }
-    pageLabel.innerText = pages;
     settings();
 }
 
@@ -121,7 +119,6 @@ const searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", search);
 
 const pageLabel = document.querySelector("#pageLabel");
-pageLabel.innerText = pages;
 
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
@@ -132,6 +129,7 @@ if (savedPostingArray) {
 function settings(){
     document.querySelector("#postings").innerHTML = '';
     const parsedPostingArray = JSON.parse(savedPostingArray);
+    pageLabel.innerText = pages;
     postingArray = parsedPostingArray;
     maxColumn = postingArray.length - ((pages - 1) * columnLength);
     minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
