@@ -13,6 +13,7 @@
     background-color: aquamarine; 
     border: none;
     border-radius: 10px;
+    background-color: rgb(123, 242, 202);
     transition: all 0.2s ease;
     box-shadow: 2px 2px 5px #999;
 }
@@ -87,13 +88,24 @@ ul hr{
     border: none;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #999;
+    transition: all 0.2s ease;
     margin-left:5px;
 }
 
+#postingCompleteButton:hover{
+    background-color: rgb(123, 242, 202);
+}
+
 #postingInput{
+    border: none;
+    border-radius: 20px;
     width:60%;
     box-shadow: 2px 2px 5px #999;
     height:70px;
+}
+
+#postingInput:focus{
+    outline: 2px solid black;
 }
 
 .postingSpan{
@@ -150,12 +162,4 @@ body::-webkit-scrollbar-track {
 
 .pageButton:hover{
     background-color: rgb(123, 242, 202);
-}
-
-#pageLeft{
-
-}
-
-#pageRight{
-    
 }
