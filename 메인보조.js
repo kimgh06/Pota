@@ -104,8 +104,9 @@ function pageLeft(){
         console.log("pages < 1 is impossible");
     }
     pageLabel.innerText = pages;
-    maxColumn = localStorage.getItem("postingArray").length - ((pages - 1) * 15);
-    minColumn = localStorage.getItem("postingArray").length - (pages * 15);
+    maxColumn = postingArray.length - ((pages - 1) * 15);
+    minColumn = postingArray.length - (pages * 15) > 0 ? postingArray.length - (pages * 15) : 0;
+    settings();
 }
 
 function pageRight(){
@@ -117,8 +118,9 @@ function pageRight(){
         console.log("impossible", postingArray.length, "<", pages * 15);
     }
     pageLabel.innerText = pages;
-    maxColumn = localStorage.getItem("postingArray").length - ((pages - 1) * 15);
-    minColumn = localStorage.getItem("postingArray").length - (pages * 15);
+    maxColumn = postingArray.length - ((pages - 1) * 15);    
+    minColumn = postingArray.length - (pages * 15) > 0 ? postingArray.length - (pages * 15) : 0;
+    settings();
 }
 
 const searchForm = document.querySelector("#searchForm");
@@ -130,14 +132,15 @@ pageLabel.innerText = pages;
 const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
     settings();
+    console.log(JSON.parse(savedPostingArray)); //저장확인용
 }
 
 function settings(){
-    console.log(JSON.parse(savedPostingArray)); //저장확인용
+    document.querySelector("#postings").innerHTML = '';
     const parsedPostingArray = JSON.parse(savedPostingArray);
     postingArray = parsedPostingArray;
-    let maxColumn = postingArray.length - ((pages - 1) * 15);
-    let minColumn = postingArray.length - (pages * 15);
+    maxColumn = postingArray.length - ((pages - 1) * 15);
+    minColumn = postingArray.length - (pages * 15) > 0 ? postingArray.length - (pages * 15) : 0;
     for(let i = minColumn; i < maxColumn; i++){
         paintPosts(parsedPostingArray[i]);
     }
