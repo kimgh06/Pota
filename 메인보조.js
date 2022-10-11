@@ -1,5 +1,4 @@
 let searchLine = document.querySelector("#searchLine");
-let countingPost = 0;
 let postingArray = [];
 let pages = 1;
 let maxColumn;
@@ -105,8 +104,6 @@ function pageLeft(){
         console.log("pages < 1 is impossible");
     }
     pageLabel.innerText = pages;
-    maxColumn = postingArray.length - ((pages - 1) * columnLength);
-    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
     settings();
 }
 
@@ -119,8 +116,6 @@ function pageRight(){
         console.log("impossible", postingArray.length, "<", pages * columnLength);
     }
     pageLabel.innerText = pages;
-    maxColumn = postingArray.length - ((pages - 1) * columnLength);    
-    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
     settings();
 }
 
@@ -145,5 +140,4 @@ function settings(){
     for(let i = minColumn; i < maxColumn; i++){
         paintPosts(parsedPostingArray[i]);
     }
-    countingPost = postingArray.length;
 }
