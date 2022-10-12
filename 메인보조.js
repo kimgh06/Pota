@@ -94,6 +94,7 @@ function search(event){
         // else
             // post[i].style.display = "none";
     }
+    document.querySelector("#postings").innerHTML = '';
     console.log(filteredArray);
     for(let i = 0; i < filteredArray.length; i++){
         paintPosts(JSON.parse(filteredArray[i]));
