@@ -45,6 +45,8 @@ function postingComplete(event) {
         }
         postingArray.push(newPostingArray);
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
+        pages = 1;
+        settings();
         paintPosts(newPostingArray);
     }
 }
