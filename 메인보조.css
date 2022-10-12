@@ -1,13 +1,15 @@
 #searchLine{
-    width: 60%; 
+    width: 35%; 
     height: 30px; 
     border: none;
     border-radius: 10px;
     box-shadow: 2px 2px 5px #999;
+    transition: all 0.2s ease;
     position: flex;
 }
 
 #searchLine:focus{
+    width: 60%; 
     outline: 2px solid black;
 }
 
