@@ -97,11 +97,11 @@ function search(event){
     console.log(filteredArray);
     pages = 1;
     pageLabel.innerText = pages;
-    maxColumn = postingArray.length - ((pages - 1) * columnLength);
-    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
+    maxColumn = filteredArray.length - ((pages - 1) * columnLength);
+    minColumn = filteredArray.length - (pages * columnLength) > 0 ? filteredArray.length - (pages * columnLength) : 0;
     console.log(minColumn);
     console.log(maxColumn);
-    for(let i = 0; i < filteredArray.length; i++){
+    for(let i = minColumn; i < maxColumn; i++){
         paintPosts(filteredArray[i]);
     }
 }
