@@ -58,7 +58,7 @@ header{
     height:20px;
     width: 35%;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid black;
     transition: all 0.2s ease;
 }
@@ -81,7 +81,7 @@ header{
     height:20px;
     width: 35%;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid black;    
     transition: all 0.2s ease;
 }
