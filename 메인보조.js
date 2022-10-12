@@ -82,22 +82,27 @@ function delAll(event) {
 
 function search(event){
     event.preventDefault();
+    let on = 0;
     const filteredArray = [];
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
     for(let i = 0; i<postingArray.length;i++){
         const posting = postingArray[i].text;
-        if(posting[0].toLowerCase().includes(toSearchText)){
+        if(posting.toLowerCase().includes(toSearchText)){
             filteredArray.push(posting);
+            on = 1;
             // post[i].style.display = "block";
         }
         // else
             // post[i].style.display = "none";
     }
-    document.querySelector("#postings").innerHTML = '';
     console.log(filteredArray);
-    for(let i = 0; i < filteredArray.length; i++){
-        paintPosts(JSON.parse(filteredArray[i]));
+    document.querySelector("#postings").innerHTML = '';
+    pages = 0;
+    maxColumn = postingArray.length - ((pages - 1) * columnLength);
+    minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
+    for(let i = minColumn; i < maxColumn; i++){
+        paintPosts(filteredArray[i]);
     }
 }
 
