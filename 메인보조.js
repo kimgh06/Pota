@@ -83,11 +83,13 @@ function delAll(event) {
 function search(event){
     event.preventDefault();
     let on = 0;
+    const filteredArray = [];
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
     for(let i = 0; i<post.length;i++){
         const posting = post[i].getElementsByClassName("postingSpan");
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
+            filteredArray.push(posting);
             post[i].style.display = "block";
             const postingId = post[i].id;
             on = 1;
