@@ -89,7 +89,7 @@ function search(event){
     for(let i = 0; i<postingArray.length;i++){
         const posting = postingArray[i].text;
         if(posting.toLowerCase().includes(toSearchText)){
-            filteredArray.push(posting);
+            filteredArray.push(postingArray[i]);
             on = 1;
             // post[i].style.display = "block";
         }
@@ -98,11 +98,11 @@ function search(event){
     }
     console.log(filteredArray);
     document.querySelector("#postings").innerHTML = '';
-    pages = 0;
+    pages = 1;
     maxColumn = postingArray.length - ((pages - 1) * columnLength);
     minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
-    for(let i = minColumn; i < maxColumn; i++){
-        paintPosts(filteredArray[i]);
+    for(let i = minColumn; i < filteredArray.length; i++){
+        paintPosts(JSON.parse(filteredArray)[i]);
     }
 }
 
