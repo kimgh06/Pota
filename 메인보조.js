@@ -99,8 +99,6 @@ function search(event){
     pageLabel.innerText = pages;
     maxColumn = filteredArray.length - ((pages - 1) * columnLength);
     minColumn = filteredArray.length - (pages * columnLength) > 0 ? filteredArray.length - (pages * columnLength) : 0;
-    console.log(minColumn);
-    console.log(maxColumn);
     for(let i = minColumn; i < maxColumn; i++){
         paintPosts(filteredArray[i]);
     }
