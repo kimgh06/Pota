@@ -122,6 +122,7 @@ ul hr{
 }
 
 .postingSpan{
+    overflow: hidden;
     width: 90%;
 }
 
