@@ -91,18 +91,15 @@ function search(event){
         if(posting.toLowerCase().includes(toSearchText)){
             filteredArray.push(postingArray[i]);
             on = 1;
-            // post[i].style.display = "block";
         }
-        // else
-            // post[i].style.display = "none";
     }
-    console.log(filteredArray);
     document.querySelector("#postings").innerHTML = '';
+    console.log(filteredArray);
     pages = 1;
     maxColumn = postingArray.length - ((pages - 1) * columnLength);
     minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
-    for(let i = minColumn; i < filteredArray.length; i++){
-        paintPosts(JSON.parse(filteredArray)[i]);
+    for(let i = minColumn; i < maxColumn; i++){
+        paintPosts(filteredArray[i]);
     }
 }
 
