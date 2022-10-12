@@ -13,7 +13,7 @@ function postingButtonToggle() {
     }
     else {
         document.querySelector("#writing").innerText = "안쓰기";
-        const postingForm = document.createElement('form');
+        const postingForm = document.createElement('div');
         postingForm.id = "postingForm";
         const postingInput = document.createElement('input');
         postingInput.type = 'text';
@@ -24,7 +24,7 @@ function postingButtonToggle() {
         const postingCompleteButton = document.createElement('button');
         postingCompleteButton.innerText = "완료";
         postingCompleteButton.id = "postingCompleteButton";
-        postingForm.addEventListener("submit", postingComplete);
+        postingCompleteButton.addEventListener("click", postingComplete);
         postingForm.appendChild(postingInput);
         postingForm.appendChild(postingCompleteButton);
         document.body.appendChild(postingForm);
