@@ -82,7 +82,6 @@ function delAll(event) {
 
 function search(event){
     event.preventDefault();
-    let on = 0;
     const filteredArray = [];
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
@@ -91,12 +90,11 @@ function search(event){
         if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
             filteredArray.push(posting);
             post[i].style.display = "block";
-            const postingId = post[i].id;
-            on = 1;
         }
         else
             post[i].style.display = "none";
     }
+    //재설정
 }
 
 function pageLeft(){
