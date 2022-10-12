@@ -99,7 +99,9 @@ function search(event){
     pageLabel.innerText = pages;
     maxColumn = postingArray.length - ((pages - 1) * columnLength);
     minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
-    for(let i = minColumn; i < filteredArray.length; i++){
+    console.log(minColumn);
+    console.log(maxColumn);
+    for(let i = 0; i < filteredArray.length; i++){
         paintPosts(filteredArray[i]);
     }
 }
