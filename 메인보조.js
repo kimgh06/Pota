@@ -85,16 +85,19 @@ function search(event){
     const filteredArray = [];
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
-    for(let i = 0; i<post.length;i++){
-        const posting = post[i].getElementsByClassName("postingSpan");
-        if(posting[0].innerHTML.toLowerCase().includes(toSearchText)){
+    for(let i = 0; i<postingArray.length;i++){
+        const posting = postingArray[i].text;
+        if(posting[0].toLowerCase().includes(toSearchText)){
             filteredArray.push(posting);
-            post[i].style.display = "block";
+            // post[i].style.display = "block";
         }
-        else
-            post[i].style.display = "none";
+        // else
+            // post[i].style.display = "none";
     }
-    //재설정
+    console.log(filteredArray);
+    for(let i = 0; i < filteredArray.length; i++){
+        paintPosts(JSON.parse(filteredArray[i]));
+    }
 }
 
 function pageLeft(){
