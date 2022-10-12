@@ -96,9 +96,10 @@ function search(event){
     document.querySelector("#postings").innerHTML = '';
     console.log(filteredArray);
     pages = 1;
+    pageLabel.innerText = pages;
     maxColumn = postingArray.length - ((pages - 1) * columnLength);
     minColumn = postingArray.length - (pages * columnLength) > 0 ? postingArray.length - (pages * columnLength) : 0;
-    for(let i = minColumn; i < maxColumn; i++){
+    for(let i = minColumn; i < filteredArray.length; i++){
         paintPosts(filteredArray[i]);
     }
 }
