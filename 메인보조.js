@@ -49,7 +49,6 @@ function postingComplete(event) {
         pages = 1;
         savedPostingArray = localStorage.getItem("postingArray");
         settings();
-        // paintPosts(newPostingArray);
     }
 }
 
@@ -86,7 +85,6 @@ function delAll(event) {
 
 function search(event){
     event.preventDefault();
-    let on = 0;
     const filteredArray = [];
     const toSearchText = document.querySelector("#searchLine").value.toLowerCase();
     const post = document.getElementsByClassName("post");
@@ -94,11 +92,9 @@ function search(event){
         const posting = postingArray[i].text;
         if(posting.toLowerCase().includes(toSearchText)){
             filteredArray.push(postingArray[i]);
-            on = 1;
         }
     }
     document.querySelector("#postings").innerHTML = '';
-    console.log(filteredArray);
     pages = 1;
     pageLabel.innerText = pages;
     maxColumn = filteredArray.length - ((pages - 1) * columnLength);
