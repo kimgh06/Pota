@@ -5,6 +5,7 @@ let maxColumn;
 let minColumn;
 const columnLength = 15;
 const main = document.querySelector("#main");
+let savedPostingArray = localStorage.getItem("postingArray");
 
 function postingButtonToggle() {
     if (document.getElementById("postingForm")) {
@@ -46,8 +47,9 @@ function postingComplete(event) {
         postingArray.push(newPostingArray);
         localStorage.setItem("postingArray", JSON.stringify(postingArray));
         pages = 1;
+        savedPostingArray = localStorage.getItem("postingArray");
         settings();
-        paintPosts(newPostingArray);
+        // paintPosts(newPostingArray);
     }
 }
 
@@ -78,6 +80,8 @@ function delAll(event) {
     div.remove();
     postingArray = postingArray.filter((post) => parseInt(post.id) != parseInt(div.id));
     localStorage.setItem("postingArray", JSON.stringify(postingArray));
+    savedPostingArray = localStorage.getItem("postingArray");
+    settings();
 }
 
 function search(event){
@@ -129,7 +133,6 @@ searchForm.addEventListener("submit", search);
 
 const pageLabel = document.querySelector("#pageLabel");
 
-const savedPostingArray = localStorage.getItem("postingArray");
 if (savedPostingArray) {
     settings();
     console.log(JSON.parse(savedPostingArray)); //저장확인용
