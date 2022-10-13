@@ -1,30 +1,36 @@
+let id;
+let password;
+const idInput = document.querySelector("#id");
+const pwInput = document.querySelector("#pw");
 
 function idPlaceholderFocusOn(){
-    id.placeholder = "";
+    idInput.placeholder = "";
 }
 
 function idPlaceholderFocusOff(){
-    id.placeholder = "id";
+    idInput.placeholder = "id";
 }
 
 function pwPlaceholderFocusOn(){
-    pw.placeholder = "";
+    pwInput.placeholder = "";
 }
 
 function pwPlaceholderFocusOff(){
-    pw.placeholder = 'password';
+    pwInput.placeholder = 'password';
 }
 
-function login(){
+function login(event){
+    event.preventDefault();
+    id = idInput.value;
+    password = pwInput.value;
+    console.log(id, password);
 }
 
-const id = document.querySelector("#id");
-id.addEventListener("focusin", idPlaceholderFocusOn);
-id.addEventListener("focusout", idPlaceholderFocusOff);
+idInput.addEventListener("focusin", idPlaceholderFocusOn);
+idInput.addEventListener("focusout", idPlaceholderFocusOff);
 
-const pw = document.querySelector("#pw");
-pw.addEventListener("focusin", pwPlaceholderFocusOn);
-pw.addEventListener("focusout", pwPlaceholderFocusOff);
+pwInput.addEventListener("focusin", pwPlaceholderFocusOn);
+pwInput.addEventListener("focusout", pwPlaceholderFocusOff);
 
 const submitButton = document.querySelector("#submitButton");
 submitButton.addEventListener("click", login);
