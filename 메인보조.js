@@ -39,7 +39,7 @@ function postingComplete(event) {
     const finalClick = confirm("제출하시겠습니까?");
     const newPostTexting = document.querySelector("#postingInput").value;
     if (finalClick) {
-        postingButtonToggle(); //input 해제
+        postingButtonToggle(); 
         const newPostingArray = {
             id: Date.now(),
             text: newPostTexting,
@@ -131,7 +131,6 @@ const pageLabel = document.querySelector("#pageLabel");
 
 if (savedPostingArray) {
     settings();
-    console.log(JSON.parse(savedPostingArray)); //저장확인용
 }
 
 function settings(){
