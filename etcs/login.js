@@ -1,5 +1,6 @@
 let id;
 let password;
+let account = [];
 const idInput = document.querySelector("#id");
 const pwInput = document.querySelector("#pw");
 
@@ -23,7 +24,8 @@ function login(event){
     event.preventDefault();
     id = idInput.value;
     password = pwInput.value;
-    console.log(id, password);
+    account = {id : id, password: password}
+    console.log(account);
 }
 
 idInput.addEventListener("focusin", idPlaceholderFocusOn);
